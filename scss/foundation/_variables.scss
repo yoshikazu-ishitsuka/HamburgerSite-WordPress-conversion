@@ -1,0 +1,26 @@
+// ブレークポイント
+$breakpoints: (
+  "sp": "screen and (min-width: 600px)",
+  "tab": "screen and (min-width: 768px)",
+  "pc": "screen and (min-width: 1025px)",
+) !default;
+
+/* border */
+// ボーダー半径を丸くする
+$radius: 10px;
+
+$card_button: 20px;
+
+// ボーダーの幅
+$bd_width: 1px;
+
+/* font-color */
+$color_base: #707070;
+
+$color_white: #ffffff;
+
+$color_eaeaea: #eaeaea;
+
+$color_3c2a10: #3c2a10;
+
+$color_f2ede9: #f2ede9;

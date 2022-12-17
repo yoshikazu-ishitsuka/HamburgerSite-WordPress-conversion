@@ -1,0 +1,23 @@
+{
+  "name": "hamburger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yoshikazu-ishitsuka/hamburger_wp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yoshikazu-ishitsuka/hamburger_wp/issues"
+  },
+  "homepage": "https://github.com/yoshikazu-ishitsuka/hamburger_wp#readme",
+  "devDependencies": {
+    "sass": "^1.55.0"
+  }
+}

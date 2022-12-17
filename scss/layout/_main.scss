@@ -1,0 +1,139 @@
+// _global.scssの読み込み
+@use "../foundation/global" as g;
+
+// メインビジュアル
+.l-main {
+  height: auto;
+  background-color: #fffdfa;
+  grid-area: main;
+
+  .p-visual--main {
+    grid-area: mainTop;
+
+    .c-title--main {
+      padding: 119px 134px 115px 25px;
+
+      // ブレークポイント（PC）
+      @include g.mq(pc) {
+        padding-left: 86px;
+      }
+    }
+  }
+
+  // archiveページ
+  .p-visual__archive--main {
+    grid-area: mainTop;
+
+    .c-title--main {
+      padding: 119px 134px 115px 25px;
+
+      // ブレークポイント（スマートフォン）
+      @include g.mq(sp) {
+        padding-top: 102px;
+        padding-bottom: 102px;
+      }
+
+      // ブレークポイント（タブレット）
+      @include g.mq(tab) {
+        padding-left: 86px;
+      }
+    }
+  }
+
+  // singleページ
+  .p-visual__single--main,
+  .p-visual__page--main {
+    grid-area: mainTop;
+
+    .c-title--main {
+      padding: 91px 39px 91px 26px;
+
+      // ブレークポイント（タブレット）
+      @include g.mq(sp) {
+        margin-left: 40px;
+      }
+    }
+  }
+
+  // サブビジュアル
+  .p-visual--sub {
+    list-style: none;
+    width: 100%;
+    grid-area: mainMiddle;
+
+    // テイクアウト
+    > &--takeOut {
+      position: relative;
+
+      .c-title--sub {
+        margin-left: 15px;
+        padding-top: 11px;
+        margin-bottom: auto;
+      }
+
+      // 2つの文章ブロックを内包
+      .sub-section {
+        display: flex;
+        flex-direction: column;
+        margin: 0 15px;
+
+        .c-title--sentence {
+          padding-top: 7px;
+          padding-left: 10px;
+        }
+
+        .c-text--sub {
+          margin: 3px 10px 15px;
+        }
+      }
+    }
+
+    // イートイン
+    &--eatIn {
+      position: relative;
+
+      .c-title--sub {
+        margin-left: 15px;
+        padding-top: 11px;
+        margin-bottom: auto;
+      }
+
+      // 2つの文章ブロックを内包
+      .sub-section {
+        margin: 0 15px;
+        display: flex;
+        flex-direction: column;
+
+        .c-title--sentence {
+          padding-top: 7px;
+          padding-left: 10px;
+        }
+
+        .c-text--sub {
+          margin: 3px 11px 15px 10px;
+        }
+      }
+    }
+
+    &--sentence {
+      margin-bottom: 15px;
+    }
+  }
+
+  // マップ関連
+  .p-access {
+    position: relative;
+    grid-area: mainBottom;
+
+    .c-background--map {
+      .c-title--access {
+        position: inherit;
+        z-index: 3;
+      }
+
+      .c-title--underline {
+        position: inherit;
+      }
+    }
+  }
+}

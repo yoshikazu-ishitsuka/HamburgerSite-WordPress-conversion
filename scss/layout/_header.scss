@@ -1,0 +1,66 @@
+// _global.scssの読み込み
+@use "../foundation/global" as g;
+
+// ヘッダーの最上位の親要素
+.l-header {
+  width: 100%;
+  height: auto;
+  grid-area: header;
+
+  // ブレークポイント（PC）
+  @include g.mq(pc) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+  }
+
+  // logoとmenuの親要素
+  &__top {
+    display: flex;
+
+    // タイトル（Hamburger）の装飾
+    &__logo {
+      font-size: 40px;
+      margin: 40px 0 38px auto;
+      // margin: 40px 0 38px 86px;
+
+      // ブレークポイント（スマートフォン）
+      @include g.mq(sp) {
+        margin-left: auto;
+      }
+
+      // ブレークポイント（PC）
+      @include g.mq(pc) {
+        font-size: 52px;
+        margin-left: 20%;
+      }
+
+      // ブレークポイント（1280px以上）
+      @media (min-width: 1280px) {
+        font-size: 64px;
+      }
+    }
+
+    // Menuボタンの装飾
+    &__menu {
+      margin-top: 14px;
+      margin-right: 16px;
+      margin-left: auto;
+
+      // ブレークポイント（PC）
+      @include g.mq(pc) {
+        display: none;
+      }
+
+      .c-button--menu {
+        font-size: 20px;
+
+        // ブレークポイント（520px以上なら）
+        @media (min-width: 520px) {
+          font-size: 34px;
+        }
+      }
+    }
+  }
+}

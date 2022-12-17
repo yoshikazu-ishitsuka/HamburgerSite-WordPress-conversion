@@ -1,0 +1,144 @@
+// _global.scssの読み込み
+@use "../../foundation/global" as g;
+
+.p-card__menu {
+  display: flex;
+  flex-direction: column;
+  margin-right: 18.9px;
+  margin-bottom: 20.9px;
+  margin-left: 20px;
+
+  // ブレークポイント（タブレット）
+  @include g.mq(tab) {
+    flex-direction: row;
+    margin-right: 35px;
+    margin-bottom: 20.5px;
+    margin-left: 43px;
+  }
+
+  // ブレークポイント（1280px以上）
+  @media (min-width: 1280px) {
+    margin: auto 100px 30px;
+  }
+
+  &--image {
+    min-height: g.rem(230);
+
+    // ブレークポイント（タブレット）
+    @include g.mq(tab) {
+      object-fit: cover;
+      object-position: 40%;
+      width: 50%;
+    }
+  }
+
+  &--caption {
+    min-height: g.rem(355);
+
+    // ブレークポイント（タブレット）
+    @include g.mq(tab) {
+      width: 50%;
+    }
+
+    .c-title--card {
+      margin: 31.5px auto 24px 17px;
+
+      // ブレークポイント（タブレット）
+      @include g.mq(tab) {
+        margin-top: 30px;
+        margin-left: 34.7px;
+      }
+
+      // ブレークポイント（1280px以上）
+      @media (min-width: 1280px) {
+        font-size: 25px;
+        margin-top: 53px;
+        margin-left: 63px;
+        margin-bottom: 47px;
+      }
+    }
+
+    .c-title--subheading {
+      margin-bottom: 10px;
+      margin-left: 17px;
+
+      // ブレークポイント（タブレット）
+      @include g.mq(tab) {
+        margin-left: 34.7px;
+      }
+
+      // ブレークポイント（1280px以上）
+      @media (min-width: 1280px) {
+        font-size: 20px;
+        margin-left: 63px;
+        margin-bottom: 17px;
+      }
+    }
+
+    .c-text--card {
+      height: auto;
+      margin: auto 17px 40px;
+      text-align: justify;
+
+      // ブレークポイント（タブレット）
+      @include g.mq(tab) {
+        margin: auto 34.7px 45px;
+      }
+
+      // ブレークポイント（1280px以上）
+      @media (min-width: 1280px) {
+        width: auto;
+        margin: auto 63px 60px;
+        text-align: justify;
+      }
+    }
+
+    // 詳しく見るボタン
+    .c-button--archive {
+      width: g.rem(163);
+      height: g.rem(42);
+      font-size: 16px;
+      font-weight: bold;
+      margin: auto 93px 43.7px 79.9px;
+
+      // ブレークポイント（スマートフォン）
+      @include g.mq(sp) {
+        width: 13rem;
+        height: 3.5rem;
+        display: block;
+        margin: 0 auto;
+      }
+
+      // ブレークポイント（タブレット）
+      @include g.mq(tab) {
+        width: g.rem(163);
+        height: g.rem(42);
+        margin: auto 93px 43.7px 79.9px;
+      }
+
+      // ブレークポイント（850px以上）
+      @media (min-width: 850px) {
+        margin: auto 99.8px 40px 114.7px;
+      }
+
+      // ブレークポイント（1280px以上）
+      @media (min-width: 1280px) {
+        width: g.rem(292);
+        height: g.rem(76);
+        border-radius: 40px;
+        margin: 0;
+        margin-left: 20%;
+        margin-bottom: 60px;
+      }
+    }
+  }
+}
+
+.p-card__menu:last-of-type {
+  margin-bottom: 60.4px;
+
+  // ブレークポイント（タブレット）
+  @include g.mq(tab) {
+    margin-bottom: 105.5px;
+  }
+}

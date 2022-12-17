@@ -1,0 +1,37 @@
+// _global.scssの読み込み
+@use "../../foundation/global" as g;
+
+.c-font {
+  &-color {
+    &--base {
+      color: #707070;
+    }
+    &--white {
+      color: #ffffff;
+    }
+    &--ea {
+      color: #eaeaea;
+    }
+    &--3c {
+      color: #3c2a10;
+    }
+  }
+
+  &-weight {
+    &--bold {
+      font-weight: bold;
+    }
+    &--normal {
+      font-weight: normal;
+    }
+  }
+
+  &-family {
+    &--robot {
+      font-family: "Roboto", sans-serif;
+    }
+    &--mplus1 {
+      font-family: "M PLUS 1p", sans-serif;
+    }
+  }
+}

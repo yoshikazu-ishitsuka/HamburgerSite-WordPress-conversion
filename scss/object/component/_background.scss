@@ -1,0 +1,36 @@
+// _global.scssの読み込み
+@use "../../foundation/global" as g;
+
+.c-background {
+  &-color--base {
+    background-color: #fff7ef;
+  }
+  &-color--white {
+    background-color: #fff;
+  }
+  &-color--card {
+    background-color: #3c2b1c;
+  }
+
+  &--map {
+    background-image: url(/images/front/map-sp-full.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  // 要素の全体を暗い透過で覆う部分
+  &--overlay {
+    &::after {
+      content: "";
+      display: block;
+    }
+  }
+
+  &--footer {
+    background-image: url(/images/common/footer.png);
+
+    @include g.mq(pc) {
+      width: 100vw;
+    }
+  }
+}

@@ -1,0 +1,138 @@
+// _global.scssの読み込み
+@use "../../foundation/global" as g;
+
+.c-title {
+  &--main {
+    font-size: 36px;
+
+    @include g.mq(pc) {
+      font-size: 45px;
+    }
+  }
+
+  &--sub {
+    font-size: 41px;
+
+    // ブレークポイント（タブレット）
+    @include g.mq(tab) {
+      font-size: 44px;
+    }
+
+    // ブレークポイント（PC）
+    @include g.mq(pc) {
+      font-size: 50px;
+    }
+  }
+
+  &--sentence {
+    font-size: 22px;
+  }
+
+  &--underline {
+    &::after {
+      content: "";
+      display: inline-block;
+      background-color: #ffffff;
+      font-weight: bold;
+      position: relative;
+    }
+  }
+
+  &--vertical-line {
+    &::after {
+      content: "";
+      display: inline-block;
+      background-color: #fff;
+    }
+  }
+
+  &--access {
+    font-size: 30px;
+    color: g.$color_white;
+  }
+
+  &--footer {
+    font-size: 20px;
+    color: g.$color_white;
+  }
+
+  &--sidebar {
+    display: none;
+    font-size: 34px;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    color: g.$color_base;
+
+    // ブレークポイント（タブレット）
+    @include g.mq(tab) {
+      display: none;
+    }
+
+    // ブレークポイント（PC）
+    @include g.mq(pc) {
+      display: inherit;
+      margin-top: 82px;
+      margin-left: 46px;
+    }
+
+    &__menu {
+      font-size: 24px;
+      font-family: "M PLUS 1p", sans-serif;
+      font-weight: bold;
+      color: g.$color_base;
+    }
+  }
+
+  &--under-text {
+    &::after {
+      content: "チーズバーガー";
+      font-size: 16px;
+    }
+  }
+
+  &--archive {
+    font-size: 28px;
+  }
+
+  &--card {
+    font-size: 20px;
+    font-weight: bold;
+    color: g.$color_white;
+  }
+
+  &--subheading {
+    font-size: 16px;
+    font-weight: bold;
+    color: g.$color_white;
+  }
+
+  &__single--h2 {
+    font-size: 28px;
+    font-weight: bold;
+    font-family: "M PLUS 1p", sans-serif;
+  }
+
+  &__single--h3 {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "M PLUS 1p", sans-serif;
+  }
+
+  &__single--h4 {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "M PLUS 1p", sans-serif;
+  }
+
+  &__single--h5 {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "M PLUS 1p", sans-serif;
+  }
+
+  &__single--h6 {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "M PLUS 1p", sans-serif;
+  }
+}

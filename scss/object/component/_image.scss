@@ -1,0 +1,44 @@
+// _global.scssの読み込み
+@use "../../foundation/global" as g;
+
+// 虫眼鏡
+.c-img {
+  &--magnifying-glass {
+    background-image: url(/images/common/search.png);
+    background-repeat: no-repeat;
+  }
+
+  // archive-page (page 1/10)
+  &--current-page {
+    background-image: url(/images/common/page.png);
+    background-repeat: no-repeat;
+
+    // ブレークポイント（タブレット）
+    @media (max-width: 599px) {
+      display: none;
+    }
+  }
+
+  // 閉じるボタン
+  &--xmark {
+    &::before {
+      content: "\f00d";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      font-style: normal;
+      cursor: pointer;
+    }
+  }
+
+  // archive-page (<<)
+  &--prev {
+    background-image: url(/images/common/prev.png);
+    background-repeat: no-repeat;
+  }
+
+  // archive-page (>>)
+  &--next {
+    background-image: url(/images/common/next.png);
+    background-repeat: no-repeat;
+  }
+}

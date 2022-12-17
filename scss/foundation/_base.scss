@@ -1,0 +1,76 @@
+// _global.scssの読み込み
+@use "../foundation/global" as g;
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-font-feature-settings: "palt";
+  font-feature-settings: "palt";
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  font-size: 16px;
+  height: 100%;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+
+  @include g.mq(pc) {
+    width: 81%;
+    display: grid;
+    grid-template-rows: 11rem auto g.rem(150);
+    grid-template-columns: 81vw 1fr;
+    grid-template-areas:
+      " header sidebar "
+      " main   sidebar "
+      " footer footer ";
+  }
+}
+
+.c-background--overlay {
+  &::after {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  &.is-active {
+    &::after {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+.c-background--overlay.is-active {
+  &::after {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+ul {
+  padding-inline-start: 0px;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  list-style-type: none;
+}

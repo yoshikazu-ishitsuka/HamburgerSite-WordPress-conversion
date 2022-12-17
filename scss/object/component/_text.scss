@@ -1,0 +1,66 @@
+// _global.scssの読み込み
+@use "../../foundation/global" as g;
+
+.c-text {
+  &--base {
+    font-size: 16px;
+    font-weight: normal;
+    font-family: "M PLUS 1p", sans-serif;
+  }
+
+  &--sub {
+    font-size: 16px;
+  }
+
+  &--access {
+    font-size: 14px;
+    color: g.$color_white;
+    display: inline-block;
+  }
+
+  &--copy-right {
+    font-size: 14px;
+    color: g.$color_white;
+    text-align: center;
+  }
+
+  &--sidebar {
+    font-size: 20px;
+    font-family: "M PLUS 1p", sans-serif;
+    color: g.$color_base;
+  }
+
+  &--archive {
+    font-size: 16px;
+  }
+
+  &--card {
+    font-size: 16px;
+    font-weight: normal;
+    color: g.$color_white;
+  }
+
+  &--pagination {
+    font-size: 16px;
+    font-weight: normal;
+    color: g.$color_base;
+  }
+
+  &--single {
+    font-size: 16px;
+    font-weight: normal;
+    font-family: "M PLUS 1p", sans-serif;
+  }
+
+  &--blockquote {
+    font-size: 16px;
+    font-weight: normal;
+    font-family: "M PLUS 1p", sans-serif;
+  }
+
+  &--single-sub {
+    font-size: 16px;
+    font-weight: normal;
+    font-family: "M PLUS 1p", sans-serif;
+  }
+}

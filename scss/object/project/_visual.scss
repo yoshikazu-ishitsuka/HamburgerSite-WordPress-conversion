@@ -1,0 +1,843 @@
+// _global.scssの読み込み
+@use "../../foundation/global" as g;
+
+// main内の画像関連についての設定
+.p-visual {
+  // archiveページの始まり //
+  &__archive {
+    &--main {
+      background-image: url(/images/common/top_01.png);
+      background-size: inherit;
+      background-position: 32% -78%;
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      // ブレークポイント（タブレット）
+      @include g.mq(tab) {
+        background-position: 47% -77%;
+      }
+
+      .c-title--main {
+        position: relative;
+        display: flex;
+        z-index: 2;
+
+        // ブレークポイント（スマートフォン）
+        @include g.mq(sp) {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+        }
+
+        // ブレークポイント（タブレット）
+        @include g.mq(tab) {
+          font-size: 60px;
+        }
+      }
+
+      .c-title--under-text {
+        &::after {
+          position: absolute;
+          bottom: 5rem;
+
+          // ブレークポイント（スマートフォン）
+          @include g.mq(sp) {
+            position: inherit;
+            bottom: 0;
+          }
+
+          // ブレークポイント（タブレット）
+          @include g.mq(tab) {
+            bottom: -3px;
+          }
+        }
+      }
+    }
+
+    &--sentence {
+      .c-title--archive {
+        margin: 30px 101px 30px 22px;
+
+        // ブレークポイント（タブレット）
+        @include g.mq(tab) {
+          margin-top: 36px;
+          margin-left: 42px;
+        }
+
+        // ブレークポイント（PC）
+        @include g.mq(pc) {
+          margin: 60px auto 25px 100px;
+        }
+      }
+
+      .c-text--archive {
+        height: auto;
+        width: 89%;
+        text-align: justify;
+        margin: 30px 18px 19px 22px;
+
+        // ブレークポイント（タブレット）
+        @include g.mq(tab) {
+          margin: 25px 35px 37px 42px;
+        }
+
+        // ブレークポイント（PC）
+        @include g.mq(pc) {
+          width: auto;
+          margin: auto 100px 70px;
+        }
+      }
+    }
+  }
+  // archiveページの終わり //
+
+  // singleページの始まり //
+  &__single {
+    &--main {
+      background-image: url(/images/single/top_02.png);
+      background-size: 56rem;
+      background-position: center 37%;
+      background-repeat: no-repeat;
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      height: 285px;
+
+      @include g.mq(tab) {
+        background-size: cover;
+      }
+
+      // ブレークポイント（PC）
+      @include g.mq(pc) {
+        height: 500px;
+        background-size: cover;
+        margin-bottom: 60px;
+      }
+
+      .c-title--main {
+        @media (max-width: 373px) {
+          font-size: 29px;
+        }
+      }
+    }
+
+    &--sentence {
+      margin-right: 20px;
+      margin-left: 20px;
+
+      // ブレークポイント（タブレット）
+      @include g.mq(tab) {
+        margin-right: 60px;
+        margin-left: 60px;
+      }
+
+      // ブレークポイント（PC）
+      @include g.mq(pc) {
+        margin-right: 100px;
+        margin-left: 100px;
+      }
+
+      .c-title__single--h2 {
+        margin-bottom: 30px;
+
+        // ブレークポイント（タブレット）
+        @include g.mq(tab) {
+          font-size: 36px;
+          margin-bottom: 60px;
+        }
+      }
+
+      .c-text--single {
+        margin-bottom: 34px;
+
+        // ブレークポイント（タブレット）
+        @include g.mq(tab) {
+          margin-bottom: 60px;
+        }
+      }
+
+      .c-title__single--h3 {
+        margin-bottom: 31px;
+
+        // ブレークポイント（タブレット）
+        @include g.mq(tab) {
+          margin-bottom: 60px;
+        }
+      }
+
+      .c-title__single--h4 {
+        margin-bottom: 37px;
+
+        // ブレークポイント（タブレット）
+        @include g.mq(tab) {
+          margin-bottom: 76px;
+        }
+      }
+
+      .c-title__single--h5,
+      .c-title__single--h6 {
+        margin-bottom: 30px;
+
+        // ブレークポイント（タブレット）
+        @include g.mq(tab) {
+          margin-bottom: 60px;
+        }
+      }
+
+      .quotation--single {
+        background-color: #f5f5f5;
+        margin-bottom: 30px;
+
+        // ブレークポイント（タブレット）
+        @include g.mq(tab) {
+          margin-bottom: 60px;
+        }
+
+        .c-text--blockquote {
+          height: auto;
+          padding: 30px 16px 30px 20px;
+
+          // ブレークポイント（タブレット）
+          @include g.mq(tab) {
+            padding: 50px 56px 60px 50px;
+          }
+
+          // ブレークポイント（PC）
+          @include g.mq(pc) {
+            padding-right: 60px;
+          }
+        }
+
+        .citation--single {
+          display: inline-block;
+          font-style: normal;
+          padding-right: 51px;
+          padding-bottom: 30px;
+          padding-left: 20px;
+
+          // ブレークポイント（タブレット）
+          @include g.mq(tab) {
+            padding-left: 50px;
+            padding-bottom: 60px;
+          }
+
+          // ブレークポイント（PC）
+          @include g.mq(pc) {
+            padding-bottom: 50px;
+          }
+
+          .citation-link {
+            color: #4a6c9b;
+            border-bottom: 2px solid #4a6c9b;
+          }
+        }
+      }
+    }
+
+    &--sub {
+      margin-right: 20px;
+      margin-left: 20px;
+
+      // ブレークポイント（タブレット）
+      @include g.mq(tab) {
+        margin-right: 60px;
+        margin-left: 60px;
+      }
+
+      // ブレークポイント（1280px）
+      @media (min-width: 1280px) {
+        margin-right: 100px;
+        margin-left: 100px;
+      }
+
+      .first-block {
+        &__top--img {
+          width: 100%;
+          height: 11.5rem;
+          object-fit: cover;
+          object-position: bottom;
+          margin-bottom: 30px;
+
+          // ブレークポイント（スマートフォン）
+          @include g.mq(sp) {
+            height: 20.5rem;
+            margin-bottom: 60px;
+          }
+
+          // ブレークポイント（PC）
+          @include g.mq(pc) {
+            height: g.rem(400);
+          }
+        }
+
+        &__middle01 {
+          display: flex;
+          margin-bottom: 30px;
+
+          // ブレークポイント（タブレット）
+          @include g.mq(tab) {
+            margin-bottom: 117px;
+          }
+
+          // ブレークポイント（1280px）
+          @media (min-width: 1280px) {
+            display: grid;
+            grid-template-rows: 191px 167px;
+            grid-template-columns: 581px 1fr;
+            column-gap: 40px;
+          }
+
+          &--img {
+            height: 6rem;
+            margin-right: 10px;
+
+            @media (min-width: 500px) {
+              height: 7rem;
+            }
+
+            @media (min-width: 600px) {
+              height: 8rem;
+            }
+
+            @media (min-width: 700px) {
+              height: 10rem;
+            }
+
+            // ブレークポイント（タブレット）
+            @include g.mq(tab) {
+              width: 43vw;
+              object-fit: cover;
+              object-position: bottom;
+              margin-right: 21px;
+            }
+
+            // ブレークポイント（1280px）
+            @media (min-width: 1280px) {
+              margin: 0;
+              grid-row: 1 / 3;
+              grid-column: 1;
+              height: 100%;
+              width: auto;
+              object-fit: contain;
+              object-position: top;
+            }
+          }
+
+          &--text {
+            height: auto;
+            text-indent: 10px;
+            line-height: 26px;
+            overflow: hidden;
+
+            // ブレークポイント（タブレット）
+            @include g.mq(tab) {
+              width: 54vw;
+            }
+
+            // ブレークポイント（1280px）
+            @media (min-width: 1280px) {
+              width: auto;
+              line-height: 28px;
+              grid-row: 1 / 3;
+              grid-column: 2;
+            }
+          }
+        }
+
+        &__middle02 {
+          display: flex;
+          margin-bottom: 30px;
+
+          // ブレークポイント（タブレット）
+          @include g.mq(tab) {
+            margin-bottom: 60px;
+          }
+
+          // ブレークポイント（1280px）
+          @media (min-width: 1280px) {
+            display: grid;
+            grid-template-rows: 191px 167px;
+            grid-template-columns: 1fr 581px;
+            column-gap: 40px;
+          }
+
+          &--img {
+            height: 6rem;
+            margin-left: 9px;
+
+            @media (min-width: 500px) {
+              height: 7rem;
+            }
+
+            @media (min-width: 600px) {
+              height: 8rem;
+            }
+
+            @media (min-width: 700px) {
+              height: 10rem;
+            }
+
+            // ブレークポイント（タブレット）
+            @include g.mq(tab) {
+              width: 43vw;
+              object-fit: cover;
+              object-position: bottom;
+              margin-left: 21px;
+            }
+
+            // ブレークポイント（1280px）
+            @media (min-width: 1280px) {
+              margin: 0;
+              grid-row: 1 / 3;
+              grid-column: 2;
+              height: 100%;
+              width: auto;
+              object-fit: contain;
+              object-position: top;
+            }
+          }
+
+          &--text {
+            height: auto;
+            text-indent: 10px;
+            line-height: 26px;
+            overflow: hidden;
+
+            // ブレークポイント（タブレット）
+            @include g.mq(tab) {
+              width: 54vw;
+            }
+
+            // ブレークポイント（1280px）
+            @media (min-width: 1280px) {
+              margin: 0;
+              grid-row: 1 / 3;
+              grid-column: 1;
+              height: 100%;
+              width: auto;
+              line-height: 28px;
+            }
+          }
+        }
+
+        &__bottom {
+          margin-bottom: 0;
+          margin: 0 34px 30px;
+          object-fit: contain;
+          object-position: center;
+
+          // ブレークポイント（タブレット）
+          @include g.mq(tab) {
+            margin-right: 126px;
+            margin-left: 127px;
+            margin-bottom: 241px;
+          }
+
+          // ブレークポイント（PC）
+          // @include g.mq(pc) {
+          @media (min-width: 900px) {
+            margin-bottom: 60px;
+          }
+
+          &--img {
+            width: 100%;
+          }
+        }
+      }
+
+      .second-block {
+        text-align: center;
+
+        // ブレークポイント（タブレット）
+        @include g.mq(tab) {
+          display: grid;
+          grid-template-rows: repeat(5, 205px);
+          grid-template-columns: 1fr 1fr;
+          column-gap: 16px;
+          row-gap: 20px;
+          margin-bottom: 62px;
+
+          @media (min-width: 900px) {
+            grid-template-rows: repeat(3, 170px);
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 20px;
+            margin-bottom: 53px;
+          }
+        }
+
+        &--img {
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+          margin-bottom: 20px;
+
+          // ブレークポイント（タブレット）
+          @include g.mq(tab) {
+            margin: 0;
+          }
+        }
+
+        &--img:last-of-type {
+          margin-bottom: 32px;
+
+          // ブレークポイント（タブレット）
+          @include g.mq(tab) {
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    &--list {
+      font-size: 16px;
+      font-weight: normal;
+      font-family: "M PLUS 1p", sans-serif;
+      line-height: 1.4375;
+      margin-right: 20px;
+      margin-left: 20px;
+
+      // ブレークポイント（タブレット）
+      @include g.mq(tab) {
+        margin-left: 110px;
+      }
+
+      // ブレークポイント（PC）
+      @include g.mq(pc) {
+        margin-left: 150px;
+      }
+
+      .list-group--01,
+      .list-group--02,
+      .list-group--04,
+      .list-group--05 {
+        margin-bottom: 20px;
+      }
+
+      .list-group--02,
+      .list-group--05 {
+        margin-left: 18px;
+      }
+
+      .list-group--03 {
+        margin-bottom: 60px;
+      }
+
+      .list-group--06 {
+        margin-bottom: 30px;
+
+        // ブレークポイント（タブレット）
+        @include g.mq(tab) {
+          margin-bottom: 60px;
+        }
+      }
+    }
+
+    &--code {
+      background-color: #f5f5f5;
+      margin-right: 20px;
+      margin-left: 20px;
+      margin-bottom: 30px;
+
+      // ブレークポイント（タブレット）
+      @include g.mq(tab) {
+        margin-right: 60px;
+        margin-left: 61px;
+        margin-bottom: 60px;
+      }
+
+      // ブレークポイント（PC）
+      @include g.mq(pc) {
+        margin-right: 100px;
+        margin-left: 100px;
+        margin-bottom: 50px;
+      }
+
+      pre {
+        // ブレークポイント（タブレット）
+        @include g.mq(tab) {
+          padding-right: 69px;
+        }
+      }
+
+      code {
+        font-size: 16px;
+        font-weight: normal;
+        font-family: "M PLUS 1p", sans-serif;
+      }
+    }
+
+    &--table {
+      margin-right: 20px;
+      margin-left: 20px;
+
+      // ブレークポイント（タブレット）
+      @include g.mq(tab) {
+        margin: 60px;
+        margin-top: auto;
+      }
+
+      // ブレークポイント（PC）
+      @include g.mq(pc) {
+        margin-right: 100px;
+        margin-left: 100px;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 30px;
+
+        tr {
+          background-color: #fff;
+
+          td {
+            border: solid 1px #707070;
+            padding: 28px 0 27px 30px;
+          }
+
+          td:first-of-type {
+            padding-right: 41px;
+          }
+
+          td:last-of-type {
+            padding-right: 106px;
+          }
+        }
+      }
+    }
+
+    &--button {
+      margin: auto 20px 30px;
+
+      // ブレークポイント（タブレット）
+      @include g.mq(tab) {
+        width: 51%;
+        margin-left: 60px;
+        margin-bottom: 60px;
+      }
+
+      // ブレークポイント（PC）
+      @include g.mq(pc) {
+        margin-right: 100px;
+        margin-left: 100px;
+      }
+    }
+
+    &--bold {
+      font-size: 16px;
+      font-weight: bold;
+      font-family: "M PLUS 1p", sans-serif;
+      margin-left: 20px;
+      margin-bottom: 177px;
+
+      // ブレークポイント（タブレット）
+      @include g.mq(tab) {
+        margin-left: 60px;
+        margin-bottom: 228px;
+      }
+
+      // ブレークポイント（PC）
+      @include g.mq(pc) {
+        margin-right: 100px;
+        margin-left: 100px;
+        margin-bottom: 353px;
+      }
+    }
+  }
+  // singleページの終わり //
+
+  &__page {
+    &--main {
+      background-image: url(/images/shop/shop.png);
+      background-size: 56rem;
+      background-position: center 37%;
+      background-repeat: no-repeat;
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      height: 285px;
+
+      @include g.mq(tab) {
+        background-size: cover;
+      }
+
+      // ブレークポイント（PC）
+      @include g.mq(pc) {
+        height: 500px;
+        background-size: cover;
+        margin-bottom: 60px;
+      }
+
+      .c-title--main {
+        @media (max-width: 373px) {
+          font-size: 29px;
+        }
+      }
+    }
+  }
+
+  // front-page-mainの始まり //
+  &--main {
+    background-image: url(/images/front/main-visual-pc.png);
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 20px;
+
+    // ブレークポイント（タブレット）
+    @include g.mq(tab) {
+      margin-bottom: 40px;
+    }
+
+    // ブレークポイント（PC）
+    @include g.mq(pc) {
+      height: g.rem(530);
+      display: flex;
+      align-items: center;
+      margin-bottom: 120px;
+    }
+  }
+  // front-page-mainの終わり //
+
+  // front-page-subの始まり //
+  &--sub {
+    // ブレークポイント（タブレット）
+    @include g.mq(tab) {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 40px;
+
+      > li {
+        display: flex;
+        flex: 1 0 auto;
+      }
+    }
+
+    // ブレークポイント（PC）
+    @include g.mq(pc) {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 131px;
+
+      > li {
+        display: flex;
+        flex: 1 0 auto;
+      }
+    }
+
+    &--takeOut {
+      background-image: url(/images/front/burger-01-sp.png);
+      background-position: center;
+      background-size: cover;
+      height: auto;
+      min-height: 642px;
+      margin: 0 20px 20px;
+      display: flex;
+      flex-flow: column;
+      justify-content: flex-end;
+      gap: 4rem;
+
+      // ブレークポイント（タブレット）
+      @include g.mq(tab) {
+        width: calc(50vw - 60px);
+        margin: 0 40px;
+      }
+
+      // ブレークポイント（PC）
+      @include g.mq(pc) {
+        width: calc(40.5vw - 60px);
+        margin: 0 40px;
+      }
+
+      // ブレークポイント（1280px以上）
+      @media (min-width: 1280px) {
+        width: calc(40.5vw - 151px);
+        margin: inherit;
+        margin-left: 111px;
+        margin-right: 80px;
+      }
+
+      // Take out下の白線
+      > .c-title--underline {
+        &::after {
+          width: g.rem(33.89);
+          height: g.rem(4);
+          bottom: -2rem;
+          right: 10.5rem;
+
+          // ブレークポイント（タブレット）
+          @include g.mq(tab) {
+            right: 11.5rem;
+          }
+
+          // ブレークポイント（PC）
+          @include g.mq(pc) {
+            right: 13rem;
+          }
+        }
+      }
+    }
+
+    &--sentence {
+      height: g.rem(124);
+      opacity: 0.8;
+      display: inline-block;
+      height: auto;
+    }
+
+    &--eatIn {
+      background-image: url(/images/front/burger-02-sp.png);
+      background-position: center;
+      background-size: cover;
+      height: auto;
+      min-height: 643px;
+      margin: 0 20px 49px 19px;
+      display: flex;
+      flex-flow: column;
+      justify-content: flex-end;
+      gap: 4rem;
+
+      // ブレークポイント（タブレット）
+      @include g.mq(tab) {
+        width: calc(50vw - 60px);
+        margin: inherit;
+        margin-right: 40px;
+      }
+
+      // ブレークポイント（PC）
+      @include g.mq(pc) {
+        width: calc(40.5vw - 60px);
+        margin: inherit;
+        margin-right: 40px;
+      }
+
+      // ブレークポイント（1280px以上）
+      @media (min-width: 1280px) {
+        width: calc(40.5vw - 152px);
+        margin: inherit;
+        margin-right: 112px;
+      }
+
+      // Eat In下の白線
+      > .c-title--underline {
+        &::after {
+          width: 33.89px;
+          height: 4px;
+          bottom: -2rem;
+          left: -7rem;
+
+          // ブレークポイント（タブレット）
+          @include g.mq(tab) {
+            left: -7.5rem;
+          }
+
+          // ブレークポイント（PC）
+          @include g.mq(pc) {
+            left: -8.5rem;
+          }
+        }
+      }
+    }
+  }
+  // front-page-subの終わり //
+}

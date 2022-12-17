@@ -1,0 +1,11 @@
+// _global.scssの読み込み
+@use "../../foundation/global" as g;
+
+// .c-form-search {
+//   &--keyword {
+//     width: 230px;
+//     height: 46px;
+//     border-radius: variables.$radius;
+//     border-width: 1px;
+//   }
+// }

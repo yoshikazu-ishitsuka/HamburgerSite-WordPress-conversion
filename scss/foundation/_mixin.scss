@@ -1,0 +1,15 @@
+// _global.scssの読み込み
+@use "../foundation/variables" as g;
+
+// ブレークポイント
+@mixin mq($breakpoint: tab) {
+  @media #{map-get(g.$breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+// ヘッダーのMenuボタン
+@mixin btn-menu($font-size, $color) {
+  font-size: $font-size;
+  color: $color;
+}

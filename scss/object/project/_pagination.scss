@@ -1,0 +1,96 @@
+// _global.scssの読み込み
+@use "../../foundation/global" as g;
+
+// archive-page内のページネーション部分
+.p-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: g.rem(35);
+  width: 89vw;
+  margin: auto;
+  margin-bottom: 31px;
+
+  // ブレークポイント（タブレット）
+  @include g.mq(tab) {
+    justify-content: center;
+    width: 72vw;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+
+  // ブレークポイント（PC）
+  @include g.mq(pc) {
+    margin-bottom: 64px;
+  }
+
+  .prev-link,
+  .next-link {
+    text-decoration: none;
+    display: flex;
+  }
+
+  .prev-link {
+    .c-img--current-page {
+      width: 7rem;
+      background-position: center;
+
+      // ブラウザ幅が767px以下の時
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+
+    .c-img--prev {
+      background-position: 0px;
+      width: 30px;
+      filter: brightness(0.5);
+    }
+  }
+
+  .c-text--pagination {
+    // ブレークポイント（タブレット）
+    @include g.mq(tab) {
+      visibility: hidden;
+      width: 0;
+    }
+  }
+
+  .pagination-link {
+    // ブラウザ幅が767px以下の時
+    @media (max-width: 767px) {
+      display: none;
+    }
+
+    .number-list {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin: 0 8px;
+
+      .page-number:first-of-type {
+        color: #ffffff;
+        background-color: #3c2b1c;
+      }
+
+      .page-number {
+        color: g.$color_base;
+        background-color: #fff;
+        font-size: 16px;
+        font-family: "Roboto", sans-serif;
+        font-weight: bold;
+        padding: 6px 13px;
+      }
+    }
+  }
+
+  > .next-link {
+    flex-direction: row-reverse;
+
+    .c-img--next {
+      background-position: 12px;
+      width: 3rem;
+      filter: brightness(0.5);
+    }
+  }
+}

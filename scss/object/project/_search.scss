@@ -1,0 +1,102 @@
+// _global.scssの読み込み
+@use "../../foundation/global" as g;
+
+// 検索フォームと検索ボタンの最上位の親要素
+.p-search--form {
+  padding-bottom: 40px;
+
+  label {
+    display: none;
+  }
+
+  // ブレークポイント（PC）
+  @include g.mq(pc) {
+    margin-right: 2rem;
+    padding-bottom: 0;
+  }
+
+  // keywordとsubmitの親要素
+  .c-form-search {
+    display: flex;
+    justify-content: center;
+    margin-left: 24px;
+
+    // ブレークポイント（520px以上なら）
+    @media (min-width: 520px) {
+      width: 70%;
+      margin: 0 auto;
+    }
+
+    // ブレークポイント（タブレット）
+    @include g.mq(tab) {
+      justify-content: inherit;
+      width: 65%;
+      margin: 0 auto;
+    }
+
+    // ブレークポイント（PC）
+    @include g.mq(pc) {
+      justify-content: flex-end;
+      margin-left: auto;
+      margin-right: 2%;
+      width: 35vw;
+    }
+
+    // 検索ボックス
+    .c-form-search__keyword {
+      width: 70%;
+      height: g.rem(46);
+      border-radius: g.$radius;
+      border-width: g.$bd_width;
+      margin-right: 12px;
+
+      // placeholder内への指定(チーズバーガー)
+      &::placeholder {
+        font-size: 16px;
+        color: g.$color_base;
+        font-weight: bold;
+        font-family: "M PLUS 1p", sans-serif;
+        text-align: left;
+        position: relative;
+        top: -2px;
+
+        &:not(:placeholder-shown) {
+          color: transparent;
+        }
+      }
+
+      // placeholderにfocusされている時
+      &:focus {
+        background-image: none;
+        text-indent: inherit;
+        &::placeholder {
+          color: transparent;
+        }
+      }
+
+      // placeholder内の表示が消えている時（入力中）
+      &:not(:placeholder-shown) {
+        background-image: none;
+      }
+    }
+
+    .c-img--magnifying-glass {
+      font-size: 24px;
+      text-indent: 3rem;
+      background-position: 16px 11px;
+    }
+
+    // 検索ボタン
+    .c-form-search__submit {
+      width: 20%;
+      height: g.rem(46);
+      background-color: #f2ede9;
+      border-radius: g.$radius;
+      border-width: g.$bd_width;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

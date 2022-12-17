@@ -1,0 +1,33 @@
+// _global.scssの読み込み
+@use "../foundation/global" as g;
+
+.l-footer {
+  text-align: center;
+  grid-area: footer;
+
+  &--menu {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    margin-bottom: auto;
+    // padding: 40px 62px 0 63px;
+
+    .c-title--vertical-line {
+      &::after {
+        width: g.rem(1.5);
+        height: 70%;
+        margin: 0 1rem;
+        position: relative;
+        top: 15%;
+      }
+    }
+  }
+  .c-text--copy-right {
+    display: inline-block;
+    margin-top: 1.5rem;
+    // margin-bottom: 30px;
+  }
+}
+.c-background--footer {
+  height: g.rem(150);
+}
