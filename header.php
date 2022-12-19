@@ -30,12 +30,5 @@
                     <button class="c-button--menu js-button is-click">Menu</button>
                 </h2>
             </div>
-            <div class="p-search--form">
-                <form action="#" method="get" class="c-form-search">
-                    <label for="#" class="screen-reader-text">検索</label>
-                    <input type="search" class="c-form-search__keyword c-img--magnifying-glass" placeholder=" ">
-                    <input type="submit" value="検索"
-                        class="c-form-search__submit c-font-family--mplus1 c-font-color--base c-font-weight--bold">
-                </form>
-            </div>
+            <?php get_search_form(); ?>
         </header>
