@@ -6,7 +6,7 @@
   // archiveページの始まり //
   &__archive {
     &--main {
-      background-image: url(/images/common/top_01.png);
+      background-image: url(../images/common/top_01.png);
       background-size: inherit;
       background-position: 32% -78%;
       display: flex;
@@ -95,7 +95,7 @@
   // singleページの始まり //
   &__single {
     &--main {
-      background-image: url(/images/single/top_02.png);
+      background-image: url(../images/single/top_02.png);
       background-size: 56rem;
       background-position: center 37%;
       background-repeat: no-repeat;
@@ -649,7 +649,7 @@
 
   &__page {
     &--main {
-      background-image: url(/images/shop/shop.png);
+      background-image: url(../images/shop/shop.png);
       background-size: 56rem;
       background-position: center 37%;
       background-repeat: no-repeat;
@@ -726,7 +726,7 @@
     }
 
     &--takeOut {
-      background-image: url(/images/front/burger-01-sp.png);
+      background-image: url(../images/front/burger-01-sp.png);
       background-position: center;
       background-size: cover;
       height: auto;
@@ -786,7 +786,7 @@
     }
 
     &--eatIn {
-      background-image: url(/images/front/burger-02-sp.png);
+      background-image: url(../images/front/burger-02-sp.png);
       background-position: center;
       background-size: cover;
       height: auto;
