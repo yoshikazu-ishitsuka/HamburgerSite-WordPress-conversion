@@ -13,7 +13,7 @@
   }
 
   &--map {
-    background-image: url(/images/front/map-sp-full.png);
+    background-image: url(../images/front/map-sp-full.png);
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -27,7 +27,7 @@
   }
 
   &--footer {
-    background-image: url(/images/common/footer.png);
+    background-image: url(../images/common/footer.png);
 
     @include g.mq(pc) {
       width: 100vw;
