@@ -20,9 +20,9 @@ body {
 .wrapper {
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
 
   @include g.mq(pc) {
-    width: 81%;
     display: grid;
     grid-template-rows: 11rem auto g.rem(150);
     grid-template-columns: 81vw 1fr;
