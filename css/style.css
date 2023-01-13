@@ -464,6 +464,22 @@ ul {
   margin-bottom: 23px;
 }
 
+.menu-cateogrymenu-container .menu .menu-top {
+  display: inline-block;
+  margin-top: 212px;
+}
+.menu-cateogrymenu-container .menu .menu-title > a {
+  font-size: 24px;
+  font-family: "M PLUS 1p", sans-serif;
+  font-weight: bold;
+  color: #707070;
+}
+.menu-cateogrymenu-container .menu .menu-item {
+  font-size: 20px;
+  font-family: "M PLUS 1p", sans-serif;
+  color: #707070;
+}
+
 .c-background-color--base {
   background-color: #fff7ef;
 }
