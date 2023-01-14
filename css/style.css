@@ -464,20 +464,41 @@ ul {
   margin-bottom: 23px;
 }
 
+.menu-cateogrymenu-container .menu > .title-sidebar {
+  font-size: 34px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  padding-top: 3.5rem;
+}
 .menu-cateogrymenu-container .menu .menu-top {
   display: inline-block;
-  margin-top: 212px;
+  padding-top: 4rem;
 }
 .menu-cateogrymenu-container .menu .menu-title > a {
   font-size: 24px;
   font-family: "M PLUS 1p", sans-serif;
   font-weight: bold;
   color: #707070;
+  margin-left: 0.5rem;
 }
 .menu-cateogrymenu-container .menu .menu-item {
+  width: 19vw;
+  color: #707070;
+  margin-top: 1.5rem;
+  margin-left: 12%;
+}
+.menu-cateogrymenu-container .menu .menu-item .sub-menu {
   font-size: 20px;
   font-family: "M PLUS 1p", sans-serif;
-  color: #707070;
+}
+.menu-cateogrymenu-container .menu .menu-item .sub-menu .menu-item-82,
+.menu-cateogrymenu-container .menu .menu-item .sub-menu .menu-item-93,
+.menu-cateogrymenu-container .menu .menu-item .sub-menu .menu-item-91 {
+  margin-top: 3rem;
+}
+.menu-cateogrymenu-container .menu .menu-item .sub-menu .menu-item-98,
+.menu-cateogrymenu-container .menu .menu-item .sub-menu .menu-item-94 {
+  margin-bottom: 2rem;
 }
 
 .c-background-color--base {

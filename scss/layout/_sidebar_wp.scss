@@ -2,10 +2,18 @@
 @use "../foundation/global" as g;
 
 .menu-cateogrymenu-container {
+  // margin-top: 212px;
+
   .menu {
+    > .title-sidebar {
+      font-size: 34px;
+      font-family: "Roboto", sans-serif;
+      font-weight: bold;
+      padding-top: 3.5rem;
+    }
     .menu-top {
       display: inline-block;
-      margin-top: 212px;
+      padding-top: 4rem;
     }
     .menu-title {
       > a {
@@ -13,12 +21,34 @@
         font-family: "M PLUS 1p", sans-serif;
         font-weight: bold;
         color: g.$color_base;
+        margin-left: 0.5rem;
+        // padding-bottom: 1rem;
+        // margin-top: 3rem;
+        // margin: 3rem 0 0 20%;
       }
     }
     .menu-item {
-      font-size: 20px;
-      font-family: "M PLUS 1p", sans-serif;
+      width: 19vw;
+      // font-size: 20px;
       color: g.$color_base;
+      margin-top: 1.5rem;
+      margin-left: 12%;
+
+      .sub-menu {
+        font-size: 20px;
+        font-family: "M PLUS 1p", sans-serif;
+
+        .menu-item-82,
+        .menu-item-93,
+        .menu-item-91 {
+          margin-top: 3rem;
+        }
+
+        .menu-item-98,
+        .menu-item-94 {
+          margin-bottom: 2rem;
+        }
+      }
     }
   }
 }
