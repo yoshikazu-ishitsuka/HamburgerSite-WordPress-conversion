@@ -2,9 +2,22 @@
 @use "../foundation/global" as g;
 
 .menu-cateogrymenu-container {
-  // margin-top: 212px;
+  width: auto;
+  height: auto;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  grid-area: sidebar;
+
+  @include g.mq(pc) {
+    left: 81%;
+    position: inherit;
+  }
 
   .menu {
+    background-color: g.$color_f2ede9;
+
     > .title-sidebar {
       font-size: 34px;
       font-family: "Roboto", sans-serif;

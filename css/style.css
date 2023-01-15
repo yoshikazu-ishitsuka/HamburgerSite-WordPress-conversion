@@ -464,6 +464,24 @@ ul {
   margin-bottom: 23px;
 }
 
+.menu-cateogrymenu-container {
+  width: auto;
+  height: auto;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  grid-area: sidebar;
+}
+@media screen and (min-width: 1025px) {
+  .menu-cateogrymenu-container {
+    left: 81%;
+    position: inherit;
+  }
+}
+.menu-cateogrymenu-container .menu {
+  background-color: #f2ede9;
+}
 .menu-cateogrymenu-container .menu > .title-sidebar {
   font-size: 34px;
   font-family: "Roboto", sans-serif;
@@ -577,7 +595,7 @@ ul {
 }
 
 .c-img--magnifying-glass {
-  background-image: url(/images/common/search.png);
+  background-image: url(../images/common/search.png);
   background-repeat: no-repeat;
 }
 .c-img--current-page {
