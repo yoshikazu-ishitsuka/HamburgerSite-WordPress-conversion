@@ -491,7 +491,6 @@ ul {
   transition: 0.5s;
 }
 .menu-cateogrymenu-container .menu .x-mark {
-  display: inline-block;
   color: #707070;
   margin-top: 25px;
   margin-right: 17px;
@@ -499,7 +498,11 @@ ul {
   -webkit-font-smoothing: antialiased;
   -webkit-text-stroke-color: #f2ede9;
   display: flex;
+  justify-content: flex-end;
   line-height: normal;
+}
+.menu-cateogrymenu-container .menu .x-mark .fa-times {
+  cursor: pointer;
 }
 @media screen and (min-width: 1025px) {
   .menu-cateogrymenu-container .menu .x-mark {
