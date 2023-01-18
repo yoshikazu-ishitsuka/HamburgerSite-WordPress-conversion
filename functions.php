@@ -19,7 +19,8 @@ function readScript()
     wp_enqueue_style('font-awesome', '//use.fontawesome.com/releases/v5.15.4/css/all.css', array(), '5.15.4');
     wp_enqueue_style('style', get_theme_file_uri('/css/style.css'), array(), '1.0.0');
     wp_enqueue_script('jquery', get_theme_file_uri('/js/jquery-3.6.1.min.js'), '', '', true);
-    wp_enqueue_script('wp-main', get_theme_file_uri('/js/wp-main.js'), array('jquery'), '1.0.0', true);
+    wp_enqueue_script('script', get_theme_file_uri('/js/script.js'), array('jquery'), '1.0.0', true);
+    // wp_enqueue_script('wp-main', get_theme_file_uri('/js/wp-main.js'), array('jquery'), '1.0.0', true);
 }
 add_action('wp_enqueue_scripts', 'readScript');
 
@@ -44,3 +45,12 @@ function custom_theme_support()
     add_editor_style();
 }
 add_action('after_setup_theme', 'custom_theme_support');
+
+
+// add_filter('nav_menu_css_class', 'my_css_attributes_filter', 100, 1);
+// add_filter('nav_menu_item_id', 'my_css_attributes_filter', 100, 1);
+// add_filter('page_css_class', 'my_css_attributes_filter', 100, 1);
+// function my_css_attributes_filter($var)
+// {
+//     return is_array($var) ? array_intersect($var, array()) : '';
+// }
