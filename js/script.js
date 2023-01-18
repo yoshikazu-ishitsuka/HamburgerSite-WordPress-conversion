@@ -20,7 +20,7 @@ jQuery(function ($) {
   $(".menu-close.js-button").click(function () {
     $(".u-background--overlay").toggleClass("js-height");
     $(".side-wrapper").css({
-      "z-index": "-1",
+      // "z-index": "-1",
       left: "100%",
     });
     $(".l-sidebar__main").css({
@@ -45,7 +45,7 @@ jQuery(function ($) {
       $(".wrapper").css({ position: "static" });
       $("body").css({ position: "static", overflow: "inherit" });
       $(".side-wrapper").css({
-        "z-index": "-1",
+        // "z-index": "-1",
         left: "100%",
       });
     }
