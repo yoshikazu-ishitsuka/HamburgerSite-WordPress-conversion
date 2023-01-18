@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<?php wp_nav_menu(); ?>
+<?php get_sidebar(); ?>
 <main class="l-main">
     <article class="p-visual">
         <div class="p-visual--main">
