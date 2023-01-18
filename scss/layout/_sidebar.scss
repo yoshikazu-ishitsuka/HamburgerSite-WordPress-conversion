@@ -117,17 +117,25 @@
         }
       }
 
+      .burger {
+        margin-top: 212px;
+
+        @include g.mq(pc) {
+          margin-top: g.rem(85);
+        }
+      }
+
       // メニューのカテゴリ名への指定
       .c-text--sidebar {
-        margin: 40px 22px auto 21.5%;
+        margin: 40px 22px auto 4.5%;
 
         // ブレークポイント（タブレット）
         @include g.mq(tab) {
-          margin: 3rem 0 0 63%;
+          margin: 3rem 0 0 10%;
         }
 
         @include g.mq(pc) {
-          margin: 3rem 0 0 26%;
+          margin: 3rem 0 0 10%;
         }
 
         > li {
