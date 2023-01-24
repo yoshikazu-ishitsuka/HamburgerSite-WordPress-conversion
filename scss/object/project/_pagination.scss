@@ -2,7 +2,8 @@
 @use "../../foundation/global" as g;
 
 // archive-page内のページネーション部分
-.p-pagination {
+.p-pagination,
+.wp-pagenavi {
   display: flex;
   justify-content: space-between;
   align-items: center;
