@@ -15,7 +15,7 @@
         <header class="l-header c-background-color--base">
             <div class="l-header__top">
                 <h1 class="l-header__top__logo c-font-color--base c-font-family--robot c-font-weight--bold">
-                    <?php bloginfo('name'); ?>
+                    <a href="/"><?php bloginfo('name'); ?></a>
                 </h1>
                 <h2 class="l-header__top__menu c-font-weight--bold c-font-family--robot">
                     <button class="c-button--menu js-button is-click">Menu</button>
