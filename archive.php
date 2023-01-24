@@ -32,8 +32,12 @@
 
     <?php get_template_part("components/card"); ?>
 
-    <section class="p-pagination">
-      <a class="prev-link" href="#">
+    <!-- <section class="p-pagination"> -->
+
+    <?php wp_pagenavi(); ?>
+
+
+    <!-- <a class="prev-link" href="#">
         <div class="c-img--current-page"></div>
         <div class="c-img--prev"></div>
         <div class="c-text--pagination">前へ</div>
@@ -54,8 +58,8 @@
       <a class="next-link" href="#">
         <div class="c-img--next"></div>
         <div class="c-text--pagination">次へ</div>
-      </a>
-    </section>
+      </a> -->
+    <!-- </section> -->
 
   </article>
 </main>
