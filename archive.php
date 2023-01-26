@@ -32,34 +32,7 @@
 
     <?php get_template_part("components/card"); ?>
 
-    <!-- <section class="p-pagination"> -->
-
     <?php wp_pagenavi(); ?>
-
-
-    <!-- <a class="prev-link" href="#">
-        <div class="c-img--current-page"></div>
-        <div class="c-img--prev"></div>
-        <div class="c-text--pagination">前へ</div>
-      </a>
-      <a class="pagination-link" href="#">
-        <ul class="number-list">
-          <li class="page-number c-border">1</li>
-          <li class="page-number c-border">2</li>
-          <li class="page-number c-border">3</li>
-          <li class="page-number c-border">4</li>
-          <li class="page-number c-border">5</li>
-          <li class="page-number c-border">6</li>
-          <li class="page-number c-border">7</li>
-          <li class="page-number c-border">8</li>
-          <li class="page-number c-border">9</li>
-        </ul>
-      </a>
-      <a class="next-link" href="#">
-        <div class="c-img--next"></div>
-        <div class="c-text--pagination">次へ</div>
-      </a> -->
-    <!-- </section> -->
 
   </article>
 </main>
