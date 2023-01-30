@@ -94,10 +94,13 @@
 
   // singleページの始まり //
   &__single {
+    section {
+      position: relative;
+    }
+
     &--main {
-      background-image: url(../images/single/top_02.png);
-      background-size: 56rem;
-      background-position: center 37%;
+      width: 100%;
+      object-fit: cover;
       background-repeat: no-repeat;
       margin-bottom: 30px;
       display: flex;
@@ -110,15 +113,19 @@
 
       // ブレークポイント（PC）
       @include g.mq(pc) {
-        height: 500px;
+        height: auto;
         background-size: cover;
         margin-bottom: 60px;
       }
+    }
 
-      .c-title--main {
-        @media (max-width: 373px) {
-          font-size: 29px;
-        }
+    .c-title--main {
+      position: absolute;
+      top: 50%;
+      left: 3rem;
+
+      @media (max-width: 373px) {
+        font-size: 29px;
       }
     }
 
@@ -267,7 +274,7 @@
 
           // ブレークポイント（PC）
           @include g.mq(pc) {
-            height: g.rem(400);
+            height: auto;
           }
         }
 
@@ -470,6 +477,7 @@
           display: inline-block;
           width: 100%;
           height: 100%;
+          object-fit: cover;
           margin-bottom: 20px;
 
           // ブレークポイント（タブレット）
