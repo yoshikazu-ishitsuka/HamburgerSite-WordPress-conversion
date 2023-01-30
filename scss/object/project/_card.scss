@@ -27,7 +27,7 @@
     // ブレークポイント（タブレット）
     @include g.mq(tab) {
       object-fit: cover;
-      object-position: 40%;
+      // object-position: 40%;
       width: 50%;
     }
   }
