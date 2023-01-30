@@ -8,11 +8,11 @@
                     <h3 class="c-title--subheading c-font-family--mplus1">小見出しが入ります</h3>
                     <p class="c-text--card c-font-family--mplus1">
                         テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                    <button class="c-button--archive c-font-family--mplus1"><a href="#">詳しく見る</a></button>
+                    <a href="<?php the_permalink(); ?>"><button class="c-button--archive c-font-family--mplus1">詳しく見る</button></a>
                 </figcaption>
             </figure>
         <?php endwhile; ?>
     <?php else : ?>
-        <p>表示する記事がありません</p>
+        <p>表示するメニューがありません</p>
     <?php endif; ?>
 </section>
