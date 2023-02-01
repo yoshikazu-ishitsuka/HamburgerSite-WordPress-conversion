@@ -1,3 +1,14 @@
+<?php
+// １、投稿テキストを取得する
+$content = get_the_content();
+
+// ２，HTMLタグをすべて取り除く
+//$content = wp_strip_all_tags($content);
+
+// ３．ショートコードを取り除く
+$content = strip_shortcodes($content);
+?>
+
 <section class="p-visual__single--sentence">
     <h2 class="c-title__single--h2">
         見出しh2
@@ -59,7 +70,7 @@
 
                     <figcaption class="first-block__middle01--text">
                         <p class="c-text--single-sub">
-                            <?php the_content(); ?>
+                            <?php echo $content; ?>
                         </p>
                     </figcaption>
                 </figure>
@@ -67,7 +78,7 @@
                 <figure class="first-block__middle02">
                     <figcaption class="first-block__middle02--text">
                         <p class="c-text--single-sub">
-                            <?php the_content(); ?>
+                            <?php echo $content; ?>
                         </p>
                     </figcaption>
                     <?php the_post_thumbnail('large', ['class' => 'first-block__middle02--img']); ?>
@@ -80,7 +91,21 @@
     </div>
 
     <div class="second-block">
-        <?php the_post_thumbnail('large', ['class' => 'second-block--img']); ?>
+        <?php
+
+                global $post;
+                //グローバル変数から現在の記事IDを取得
+                $post_id = $post->ID;
+
+                //投稿中のすべての添付データの情報をオブジェクト形式（デフォルト）で取得
+                $attachments = get_children(array('post_parent' => $post_id, 'post_type' => 'attachment'));
+
+                // オブジェクトの配列をループ処理
+                foreach ($attachments as $attachment_id => $attachment) {
+                    // $attachment_id が個々の画像IDとなる
+                    echo wp_get_attachment_image($attachment_id, 'medium');
+                }
+        ?>
     </div>
 
 
