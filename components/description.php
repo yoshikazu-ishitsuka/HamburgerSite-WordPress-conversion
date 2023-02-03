@@ -63,56 +63,11 @@ $content = strip_shortcodes($content);
     <div class="first-block">
         <?php if (have_posts()) : ?>
             <?php while (have_posts()) : the_post(); ?>
-                <?php the_post_thumbnail('large', ['class' => 'first-block__top--img']); ?>
-
-                <figure class="first-block__middle01">
-                    <?php the_post_thumbnail('large', ['class' => 'first-block__middle01--img']); ?>
-
-                    <figcaption class="first-block__middle01--text">
-                        <p class="c-text--single-sub">
-                            <?php echo $content; ?>
-                        </p>
-                    </figcaption>
-                </figure>
-
-                <figure class="first-block__middle02">
-                    <figcaption class="first-block__middle02--text">
-                        <p class="c-text--single-sub">
-                            <?php echo $content; ?>
-                        </p>
-                    </figcaption>
-                    <?php the_post_thumbnail('large', ['class' => 'first-block__middle02--img']); ?>
-                </figure>
-
-                <figure class="first-block__bottom">
-                    <?php the_post_thumbnail('large', ['class' => 'first-block__bottom--img']); ?>
-
-                </figure>
-    </div>
-
-    <div class="second-block">
-        <?php
-
-                global $post;
-                //グローバル変数から現在の記事IDを取得
-                $post_id = $post->ID;
-
-                //投稿中のすべての添付データの情報をオブジェクト形式（デフォルト）で取得
-                $attachments = get_children(array('post_parent' => $post_id, 'post_type' => 'attachment'));
-
-                // オブジェクトの配列をループ処理
-                foreach ($attachments as $attachment_id => $attachment) {
-                    // $attachment_id が個々の画像IDとなる
-                    echo wp_get_attachment_image($attachment_id, 'medium');
-                }
-        ?>
-    </div>
-
-
-<?php endwhile; ?>
-<?php else : ?>
-    <p>表示するメニューがありません</p>
-<?php endif; ?>
+                <?php the_content(); ?>
+            <?php endwhile; ?>
+        <?php else : ?>
+            <p>表示するメニューがありません</p>
+        <?php endif; ?>
 
 </section>
 
