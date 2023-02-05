@@ -4,7 +4,7 @@
 <main class="l-main">
   <article class="p-visual__archive">
     <section class="p-visual__archive--main u-background--overlay--archive">
-      <h2 class="c-title--main c-title--under-text c-font-color--white c-font-family--robot c-font-weight--bold">
+      <h2 class="c-title--main c-font-color--white c-font-family--robot c-font-weight--bold">
         Menu:<span class="c-title--under-text"><?php single_cat_title('', true); ?></span>
       </h2>
     </section>
