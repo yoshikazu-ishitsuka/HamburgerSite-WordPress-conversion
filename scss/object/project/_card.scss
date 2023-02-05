@@ -23,6 +23,7 @@
 
   &--image {
     min-height: g.rem(230);
+    width: auto;
 
     // ブレークポイント（タブレット）
     @include g.mq(tab) {
