@@ -446,11 +446,11 @@ ul {
     margin: 3rem 0 0 20%;
   }
 }
-.side-wrapper .p-sideMenu__main .burger {
+.side-wrapper .p-sideMenu__main .side_menu_top {
   margin-top: 212px;
 }
 @media screen and (min-width: 1025px) {
-  .side-wrapper .p-sideMenu__main .burger {
+  .side-wrapper .p-sideMenu__main .side_menu_top {
     margin-top: 5.3125rem;
   }
 }
@@ -459,16 +459,19 @@ ul {
 }
 @media screen and (min-width: 768px) {
   .side-wrapper .p-sideMenu__main .c-text--sidebar {
-    margin: 3rem 0 0 10%;
+    margin: 2rem 0 0 10%;
   }
 }
 @media screen and (min-width: 1025px) {
   .side-wrapper .p-sideMenu__main .c-text--sidebar {
-    margin: 3rem 0 0 10%;
+    margin: 2rem 0 0 10%;
   }
 }
 .side-wrapper .p-sideMenu__main .c-text--sidebar > li {
   margin-bottom: 23px;
+}
+.side-wrapper .p-sideMenu__main .side_menu_bottom {
+  margin-bottom: 5rem;
 }
 
 .c-background-color--base {
@@ -651,6 +654,12 @@ ul {
 .c-title--under-text {
   margin-top: 0.5rem;
   font-size: 16px;
+}
+@media (max-width: 600px) {
+  .c-title--under-text {
+    margin-top: 17px;
+    margin-left: 10px;
+  }
 }
 .c-title--archive {
   font-size: 28px;
@@ -1705,6 +1714,7 @@ ul {
 }
 .p-card__menu--image {
   min-height: 14.375rem;
+  width: auto;
 }
 @media screen and (min-width: 768px) {
   .p-card__menu--image {

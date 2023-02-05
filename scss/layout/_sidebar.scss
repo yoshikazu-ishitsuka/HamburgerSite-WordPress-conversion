@@ -117,7 +117,7 @@
         }
       }
 
-      .burger {
+      .side_menu_top {
         margin-top: 212px;
 
         @include g.mq(pc) {
@@ -131,16 +131,20 @@
 
         // ブレークポイント（タブレット）
         @include g.mq(tab) {
-          margin: 3rem 0 0 10%;
+          margin: 2rem 0 0 10%;
         }
 
         @include g.mq(pc) {
-          margin: 3rem 0 0 10%;
+          margin: 2rem 0 0 10%;
         }
 
         > li {
           margin-bottom: 23px;
         }
+      }
+
+      .side_menu_bottom {
+        margin-bottom: 5rem;
       }
     }
   }

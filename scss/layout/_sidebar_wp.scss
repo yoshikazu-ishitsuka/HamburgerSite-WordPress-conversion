@@ -96,14 +96,10 @@
         font-weight: bold;
         color: g.$color_base;
         margin-left: 0.5rem;
-        // padding-bottom: 1rem;
-        // margin-top: 3rem;
-        // margin: 3rem 0 0 20%;
       }
     }
     .menu-item {
       width: 19vw;
-      // font-size: 20px;
       color: g.$color_base;
       margin-top: 1.5rem;
       margin-left: 12%;
@@ -111,17 +107,6 @@
       .sub-menu {
         font-size: 20px;
         font-family: "M PLUS 1p", sans-serif;
-
-        .menu-item-82,
-        .menu-item-93,
-        .menu-item-91 {
-          margin-top: 3rem;
-        }
-
-        .menu-item-98,
-        .menu-item-94 {
-          margin-bottom: 2rem;
-        }
       }
     }
   }
