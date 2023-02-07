@@ -5,8 +5,8 @@ jQuery(function ($) {
     $(".wrapper.u-background--overlay").toggleClass("js-height");
     $(".side-wrapper").css({
       "z-index": "4",
-      left: "0",
-      "transition-duration": "0.5s",
+      left: "0%",
+      "transition-duration": "0.3s",
     });
     $(".l-sidebar__main").toggleClass("is-open");
     $("body").css({ position: "fixed", overflow: "scroll" });
@@ -24,7 +24,7 @@ jQuery(function ($) {
       left: "100%",
     });
     $(".l-sidebar__main").css({
-      "transition-duration": "0.5s",
+      "transition-duration": "0.3s",
     });
     $(".wrapper").css({ position: "static" });
     $("body").css({ position: "static", overflow: "inherit" });
