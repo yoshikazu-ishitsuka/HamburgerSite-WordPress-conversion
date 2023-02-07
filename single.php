@@ -4,7 +4,7 @@
 <main class="l-main">
   <article class="p-visual__single">
     <section>
-      <?php echo get_the_post_thumbnail('', 'large', ['class' => 'p-visual__single--main']); ?>
+      <?php echo get_the_post_thumbnail('', 'medium_large', array('class' => 'p-visual__single--main')); ?>
       <h1 class="c-title--main c-font-color--white c-font-family--mplus1 c-font-weight--bold">
         <?php the_title(); ?>
       </h1>
