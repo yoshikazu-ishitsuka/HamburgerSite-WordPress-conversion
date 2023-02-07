@@ -114,6 +114,7 @@
       // ブレークポイント（PC）
       @include g.mq(pc) {
         height: auto;
+        max-height: 500px;
         background-size: cover;
         margin-bottom: 60px;
       }

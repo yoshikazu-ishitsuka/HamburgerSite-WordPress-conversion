@@ -356,7 +356,6 @@ ul {
 
 .side-wrapper {
   width: auto;
-  height: auto;
   display: flex;
   position: absolute;
   top: 0;
@@ -366,13 +365,12 @@ ul {
 @media screen and (min-width: 1025px) {
   .side-wrapper {
     left: 81%;
-    position: inherit;
+    position: sticky;
   }
 }
 .side-wrapper .p-sideMenu {
   display: flex;
   justify-content: flex-end;
-  height: 100vh;
 }
 @media screen and (min-width: 1025px) {
   .side-wrapper .p-sideMenu {
@@ -401,17 +399,15 @@ ul {
 }
 .side-wrapper .p-sideMenu__main {
   width: 0;
-  height: 100%;
   overflow: scroll;
   background: linear-gradient(to right, rgba(95, 93, 91, 0) 0%, rgba(95, 93, 91, 0) 12.5%, #f2ede9 12.5%, #f2ede9 100%);
 }
 .side-wrapper .p-sideMenu__main.is-open {
   width: 100vw;
-  transition: 0.5s;
+  height: 100vh;
 }
 @media screen and (min-width: 768px) {
   .side-wrapper .p-sideMenu__main {
-    width: 0;
     background: linear-gradient(to right, rgba(95, 93, 91, 0) 0%, rgba(95, 93, 91, 0) 56%, #f2ede9 56%, #f2ede9 100%);
   }
 }
@@ -853,6 +849,7 @@ ul {
 @media screen and (min-width: 1025px) {
   .p-visual__single--main {
     height: auto;
+    max-height: 500px;
     background-size: cover;
     margin-bottom: 60px;
   }
