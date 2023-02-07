@@ -34,6 +34,8 @@ function custom_theme_support()
     ));
     // テーマサポート
     add_theme_support('post-thumbnails');
+    set_post_thumbnail_size(960, 640); //デフォルトサイズの設定
+    // add_image_size('x-small', 60, 60);
     add_theme_support('title-tag');
     add_theme_support('menus');
     register_nav_menus(array(
