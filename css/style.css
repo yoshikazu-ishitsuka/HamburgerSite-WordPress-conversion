@@ -1824,6 +1824,11 @@ ul {
   }
 }
 
+.search_result {
+  margin-left: 100px;
+  font-size: 18px;
+}
+
 .p-pagination,
 .wp-pagenavi {
   display: flex;

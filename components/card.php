@@ -13,6 +13,6 @@
             </figure>
         <?php endwhile; ?>
     <?php else : ?>
-        <p>表示するメニューがありません</p>
+        <p class="search_result">「表示するメニューがありません」</p>
     <?php endif; ?>
 </section>
