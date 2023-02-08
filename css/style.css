@@ -166,6 +166,26 @@ ul {
   list-style-type: none;
 }
 
+.page_error {
+  margin-top: 3rem;
+  margin-left: 10rem;
+}
+
+.page_error__h2 {
+  margin-bottom: 2rem;
+}
+
+.error_url {
+  color: red;
+}
+
+.page_error__top {
+  font-size: 20px;
+  display: inline-block;
+  margin-top: 2rem;
+  color: darkmagenta;
+}
+
 .l-footer {
   text-align: center;
   grid-area: footer;
