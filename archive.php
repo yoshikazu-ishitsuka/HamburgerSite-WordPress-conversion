@@ -11,7 +11,7 @@
 
     <section class="p-visual__archive--sentence">
       <h2 class="c-title--archive">
-        小見出しが入ります
+        メニューの一覧です
       </h2>
       <p class="c-text--archive c-font-family--mplus1">
         テキストが入ります。
