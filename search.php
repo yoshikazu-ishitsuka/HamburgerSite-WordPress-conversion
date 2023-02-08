@@ -9,24 +9,15 @@
       </h2>
     </section>
 
+
     <section class="p-visual__archive--sentence">
       <h2 class="c-title--archive">
-        小見出しが入ります
+        <?php if (empty(get_search_query())) : ?>
+          「検索キーワードが未入力です」
+        <?php else : ?>
+          <?php the_search_query(); ?> の検索結果
       </h2>
       <p class="c-text--archive c-font-family--mplus1">
-        テキストが入ります。
-        テキストが入ります。
-        テキストが入ります。
-        テキストが入ります。
-        テキストが入ります。
-        テキストが入ります。
-        テキストが入ります。
-        テキストが入ります。
-        テキストが入ります。
-        テキストが入ります。
-        テキストが入ります。
-        テキストが入ります。
-        テキストが入ります。
       </p>
     </section>
 
@@ -34,6 +25,7 @@
 
     <?php wp_pagenavi(); ?>
 
+  <?php endif; ?>
   </article>
 </main>
 <?php get_footer(); ?>
