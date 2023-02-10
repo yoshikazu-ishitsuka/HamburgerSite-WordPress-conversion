@@ -657,6 +657,10 @@
   // singleページの終わり //
 
   &__page {
+    section {
+      position: relative;
+    }
+
     &--main {
       background-image: url(../images/shop/shop.png);
       background-size: 56rem;
@@ -666,6 +670,7 @@
       display: flex;
       align-items: center;
       height: 285px;
+      width: 100%;
 
       @include g.mq(tab) {
         background-size: cover;
@@ -677,11 +682,15 @@
         background-size: cover;
         margin-bottom: 60px;
       }
+    }
 
-      .c-title--main {
-        @media (max-width: 373px) {
-          font-size: 29px;
-        }
+    .c-title--main {
+      position: absolute;
+      top: 50%;
+      left: 3rem;
+
+      @media (max-width: 373px) {
+        font-size: 29px;
       }
     }
   }
