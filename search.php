@@ -16,6 +16,7 @@
           「検索キーワードが未入力です」
         <?php else : ?>
           <?php the_search_query(); ?> の検索結果
+          <?php echo $wp_query->found_posts; ?>件
       </h2>
       <p class="c-text--archive c-font-family--mplus1">
       </p>
