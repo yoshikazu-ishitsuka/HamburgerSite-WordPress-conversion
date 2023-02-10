@@ -32,33 +32,23 @@ function custom_theme_support()
         'gallery',
         'caption',
     ));
+
     // テーマサポート
     add_theme_support('post-thumbnails');
     set_post_thumbnail_size(960, 640); //デフォルトサイズの設定
-    // add_image_size('x-small', 60, 60);
     add_theme_support('title-tag');
     add_theme_support('menus');
     register_nav_menus(array(
         'footer_nav' => esc_html('footer navigation', 'HamburgerSite'),
         'category_nav' => esc_html('category navigation', 'HamburgerSite'),
     ));
-    // add_theme_support('editor-styles');
-    // add_editor_style();
 }
 add_action('after_setup_theme', 'custom_theme_support');
 
 add_theme_support('editor-styles');
-
 function org_theme_add_editor_styles()
 {
     $editor_style_url = get_theme_file_uri('editor-style.css');
     wp_enqueue_style('block-editor-style', $editor_style_url);
 }
 add_action('enqueue_block_editor_assets', 'org_theme_add_editor_styles');
-
-// function block_editor_css()
-// {
-//     add_editor_style('/css/style.css');
-//     add_editor_style('editor-style.css');
-// }
-// add_action('after_setup_theme', 'block_editor_css');
