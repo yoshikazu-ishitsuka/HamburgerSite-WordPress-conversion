@@ -1,6 +1,6 @@
 <?php
 // １、投稿テキストを取得する
-$content = get_the_content();
+$content = esc_html(get_the_content());
 
 // ２，HTMLタグをすべて取り除く
 //$content = wp_strip_all_tags($content);
