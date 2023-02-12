@@ -5,9 +5,21 @@
                 <?php the_post_thumbnail('full', ['class' => 'p-card__menu--image']); ?>
                 <figcaption class="p-card__menu--caption c-background-color--card">
                     <h2 class="c-title--card c-font-family--mplus1"><?php the_title(); ?></h2>
-                    <h3 class="c-title--subheading c-font-family--mplus1">小見出しが入ります</h3>
+                    <h3 class="c-title--subheading c-font-family--mplus1"></h3>
                     <p class="c-text--card c-font-family--mplus1">
-                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                        <?php
+                        if (has_excerpt()) {
+                            echo get_the_excerpt();
+                        } else {
+                            if (mb_strlen($post->post_content, 'UTF-8') > 110) {
+                                $content = mb_substr(strip_tags($post->post_content), 0, 110, 'UTF-8');
+                                echo $content . '…';
+                            } else {
+                                // echo strip_tags($post->post_content);
+                            }
+                        }
+                        ?>
+                    </p>
                     <a href="<?php the_permalink(); ?>"><button class="c-button--archive c-font-family--mplus1">詳しく見る</button></a>
                 </figcaption>
             </figure>
