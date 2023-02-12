@@ -11,7 +11,7 @@
             <li>
                 <div class="p-visual--sub--takeOut">
                     <h2 class="c-title--sub c-font-color--ea c-font-family--robot c-font-weight--bold c-title--underline">
-                        Take Out
+                        <a href="http://hamburgersite.local/category/takeout/">Take Out</a>
                     </h2>
                     <div class="sub-section">
                         <dl class="p-visual--sub--sentence c-background-color--white">
@@ -34,7 +34,7 @@
             <li>
                 <div class="p-visual--sub--eatIn">
                     <h2 class="c-title--sub c-font-color--ea c-font-family--robot c-font-weight--bold c-title--underline">
-                        Eat In
+                        <a href="http://hamburgersite.local/category/eatin/">Eat In</a>
                     </h2>
                     <div class="sub-section">
                         <dl class="p-visual--sub--sentence c-background-color--white">
