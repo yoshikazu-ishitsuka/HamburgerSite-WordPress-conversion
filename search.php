@@ -4,8 +4,8 @@
 <main class="l-main">
   <article class="p-visual__archive">
     <section class="p-visual__archive--main u-background--overlay--archive">
-      <h2 class="c-title--main c-title--under-text c-font-color--white c-font-family--robot c-font-weight--bold">
-        Search:
+      <h2 class="c-title--main c-font-color--white c-font-family--robot c-font-weight--bold">
+        Search:<span class="c-title--under-text"><?php echo esc_html(get_search_query()); ?></span>
       </h2>
     </section>
 
