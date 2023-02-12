@@ -145,6 +145,17 @@
 }
 
 .search_result {
-  margin-left: 100px;
+  margin-left: 22px;
+  margin-bottom: 200px;
   font-size: 18px;
+
+  // ブレークポイント（タブレット）
+  @include g.mq(tab) {
+    margin-left: 42px;
+  }
+
+  // ブレークポイント（PC）
+  @include g.mq(pc) {
+    margin-left: 100px;
+  }
 }
