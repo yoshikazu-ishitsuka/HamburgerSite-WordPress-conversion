@@ -56,7 +56,8 @@
     }
 
     &--sentence {
-      .c-title--archive {
+      .c-title--archive,
+      .c-title--search_result {
         margin: 30px 101px 30px 22px;
 
         // ブレークポイント（タブレット）
