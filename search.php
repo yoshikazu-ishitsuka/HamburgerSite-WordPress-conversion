@@ -9,9 +9,8 @@
       </h2>
     </section>
 
-
     <section class="p-visual__archive--sentence">
-      <h2 class="c-title--archive">
+      <h2 class="c-title--search_result">
         <?php if (empty(get_search_query())) : ?>
           「検索キーワードが未入力です」
         <?php else : ?>
