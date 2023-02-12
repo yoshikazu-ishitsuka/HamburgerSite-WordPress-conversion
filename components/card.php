@@ -9,7 +9,7 @@
                     <p class="c-text--card c-font-family--mplus1">
                         <?php
                         if (has_excerpt()) {
-                            echo get_the_excerpt();
+                            echo esc_html(get_the_excerpt());
                         } else {
                             if (mb_strlen($post->post_content, 'UTF-8') > 110) {
                                 $content = mb_substr(strip_tags($post->post_content), 0, 110, 'UTF-8');
