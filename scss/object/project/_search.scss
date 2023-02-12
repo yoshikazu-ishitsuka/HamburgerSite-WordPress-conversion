@@ -50,7 +50,7 @@
       border-width: g.$bd_width;
       margin-right: 12px;
 
-      // placeholder内への指定(チーズバーガー)
+      // placeholder内への指定
       &::placeholder {
         font-size: 16px;
         color: g.$color_base;
@@ -67,16 +67,11 @@
 
       // placeholderにfocusされている時
       &:focus {
-        background-image: none;
-        text-indent: inherit;
+        text-indent: 3rem;
+
         &::placeholder {
           color: transparent;
         }
-      }
-
-      // placeholder内の表示が消えている時（入力中）
-      &:not(:placeholder-shown) {
-        background-image: none;
       }
     }
 

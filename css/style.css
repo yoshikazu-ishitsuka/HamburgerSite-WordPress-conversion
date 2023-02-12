@@ -1703,14 +1703,10 @@ ul {
   color: transparent;
 }
 .p-search--form .c-form-search .c-form-search__keyword:focus {
-  background-image: none;
-  text-indent: inherit;
+  text-indent: 3rem;
 }
 .p-search--form .c-form-search .c-form-search__keyword:focus::placeholder {
   color: transparent;
-}
-.p-search--form .c-form-search .c-form-search__keyword:not(:placeholder-shown) {
-  background-image: none;
 }
 .p-search--form .c-form-search .c-img--magnifying-glass {
   font-size: 24px;
