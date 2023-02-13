@@ -11,11 +11,13 @@
     </section>
     <?php if (have_posts()) : ?>
       <?php while (have_posts()) : the_post(); ?>
-        <?php the_content(); ?>
-      <?php endwhile; ?>
-    <?php else : ?>
-      <p>表示するメニューがありません</p>
-    <?php endif; ?>
+        <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+          <?php wp_link_pages(); ?>
+          <?php the_content(); ?>
+        <?php endwhile; ?>
+      <?php else : ?>
+        <p>表示するメニューがありません</p>
+      <?php endif; ?>
 
   </article>
 </main>
