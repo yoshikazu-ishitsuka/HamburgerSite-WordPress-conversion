@@ -37,7 +37,8 @@ function custom_theme_support()
     add_theme_support('post-thumbnails');
     set_post_thumbnail_size(960, 640); //デフォルトサイズの設定
     add_theme_support('title-tag');
-    add_theme_support('menus');
+    add_theme_support('automatic-feed-links');
+    // add_theme_support('menus');
     register_nav_menus(array(
         'footer_nav' => esc_html('footer navigation', 'HamburgerSite'),
         'category_nav' => esc_html('category navigation', 'HamburgerSite'),
