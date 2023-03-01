@@ -48,7 +48,7 @@
       width: 70%;
       height: g.rem(46);
       border-radius: g.$radius;
-      border-width: g.$bd_width;
+      border: g.$bd_width solid black;
       margin-right: 12px;
 
       // placeholder内への指定
@@ -59,7 +59,9 @@
         font-family: "M PLUS 1p", sans-serif;
         text-align: left;
         position: relative;
-        top: -2px;
+        top: 50%;
+        transform: translateY(-100%);
+        // line-height: normal !important ;
 
         &:not(:placeholder-shown) {
           color: transparent;
@@ -88,7 +90,7 @@
       height: g.rem(46);
       background-color: #f2ede9;
       border-radius: g.$radius;
-      border-width: g.$bd_width;
+      border: g.$bd_width solid black;
 
       &:hover {
         cursor: pointer;

@@ -1688,7 +1688,7 @@ ul {
   width: 70%;
   height: 2.875rem;
   border-radius: 10px;
-  border-width: 1px;
+  border: 1px solid black;
   margin-right: 12px;
 }
 .p-search--form .c-form-search .c-form-search__keyword::placeholder {
@@ -1698,7 +1698,8 @@ ul {
   font-family: "M PLUS 1p", sans-serif;
   text-align: left;
   position: relative;
-  top: -2px;
+  top: 50%;
+  transform: translateY(-100%);
 }
 .p-search--form .c-form-search .c-form-search__keyword::placeholder:not(:placeholder-shown) {
   color: transparent;
@@ -1719,7 +1720,7 @@ ul {
   height: 2.875rem;
   background-color: #f2ede9;
   border-radius: 10px;
-  border-width: 1px;
+  border: 1px solid black;
 }
 .p-search--form .c-form-search .c-form-search__submit:hover {
   cursor: pointer;
