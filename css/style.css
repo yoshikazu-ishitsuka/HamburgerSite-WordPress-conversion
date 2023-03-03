@@ -1697,9 +1697,9 @@ ul {
   font-weight: bold;
   font-family: "M PLUS 1p", sans-serif;
   text-align: left;
-  position: relative;
+  position: absolute;
   top: 50%;
-  transform: translateY(-100%);
+  transform: translateY(-50%);
 }
 .p-search--form .c-form-search .c-form-search__keyword::placeholder:not(:placeholder-shown) {
   color: transparent;
