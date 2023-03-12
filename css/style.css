@@ -1696,10 +1696,8 @@ ul {
   color: #707070;
   font-weight: bold;
   font-family: "M PLUS 1p", sans-serif;
-  text-align: left;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  position: relative;
+  top: -2px;
 }
 .p-search--form .c-form-search .c-form-search__keyword::placeholder:not(:placeholder-shown) {
   color: transparent;
