@@ -1383,6 +1383,12 @@ ul {
     margin-bottom: 353px;
   }
 }
+.p-visual__single .recommended-title {
+  margin-left: 2rem;
+  margin-bottom: 120px;
+  font-size: 16px;
+  font-weight: 700;
+}
 .p-visual__page section {
   position: relative;
 }
