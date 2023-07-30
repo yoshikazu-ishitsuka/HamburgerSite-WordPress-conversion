@@ -133,6 +133,10 @@
       }
     }
   }
+  &__related {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .p-card__menu:last-of-type {

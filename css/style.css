@@ -1855,6 +1855,10 @@ ul {
     margin-bottom: 60px;
   }
 }
+.p-card__menu__related {
+  display: flex;
+  flex-direction: column;
+}
 
 .p-card__menu:last-of-type {
   margin-bottom: 60.4px;
