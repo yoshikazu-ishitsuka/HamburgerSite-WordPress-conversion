@@ -3,10 +3,10 @@
         <?php while (have_posts()) : the_post(); ?>
             <figure class="p-card__menu__related">
                 <?php the_post_thumbnail('medium', ['class' => 'p-card__menu--image__related']); ?>
-                <figcaption class="p-card__menu--caption c-background-color--card">
-                    <h2 class="c-title--card c-font-family--mplus1"><?php the_title(); ?></h2>
-                    <h3 class="c-title--subheading c-font-family--mplus1"></h3>
-                    <p class="c-text--card c-font-family--mplus1">
+                <figcaption class="p-card__menu--caption__related c-background-color--card">
+                    <h2 class="c-title--card__related c-font-family--mplus1"><?php the_title(); ?></h2>
+                    <h3 class="c-title--subheading__related c-font-family--mplus1"></h3>
+                    <p class="c-text--card__related c-font-family--mplus1">
                         <?php
                         if (has_excerpt()) {
                             echo esc_html(get_the_excerpt());
@@ -20,7 +20,11 @@
                         }
                         ?>
                     </p>
-                    <a href="<?php the_permalink(); ?>"><button class="c-button--archive c-font-family--mplus1">詳しく見る</button></a>
+                    <div class="c-button--archive__related--outer">
+                        <button class="c-button--archive__related c-font-family--mplus1">
+                            <a class="test" href="<?php the_permalink(); ?>">詳しく見る</a>
+                        </button>
+                    </div>
                 </figcaption>
             </figure>
         <?php endwhile; ?>

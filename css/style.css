@@ -532,6 +532,15 @@ ul {
   text-align: center;
   border-radius: 20px;
 }
+.c-button--archive__related--outer {
+  text-align: right;
+  padding-right: 20px;
+}
+.c-button--archive__related {
+  color: #3C2B1C;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #3C2B1C;
+}
 .c-button--single {
   cursor: pointer;
   background-color: #f2ede9;
@@ -692,6 +701,10 @@ ul {
   font-weight: bold;
   color: #ffffff;
 }
+.c-title--card__related {
+  color: #3C2B1C;
+  padding: 28px 0 16px 18px;
+}
 .c-title--subheading {
   font-size: 16px;
   font-weight: bold;
@@ -754,6 +767,11 @@ ul {
   font-size: 16px;
   font-weight: normal;
   color: #ffffff;
+}
+.c-text--card__related {
+  color: #3C2B1C;
+  padding: 0 18px;
+  padding-bottom: 20px;
 }
 .c-text--pagination {
   font-size: 16px;
@@ -857,6 +875,32 @@ ul {
   .p-visual__archive--sentence .c-text--archive {
     width: auto;
     margin: auto 100px 70px;
+  }
+}
+.p-visual__archive--card__related {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+@media (max-width: 600px) {
+  .p-visual__archive--card__related {
+    align-items: center;
+  }
+}
+@media screen and (min-width: 600px) {
+  .p-visual__archive--card__related {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 150px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 829px) {
+  .p-visual__archive--card__related::after {
+    content: "";
+    display: block;
+    width: 250px;
   }
 }
 .p-visual__single section {
@@ -1855,9 +1899,57 @@ ul {
     margin-bottom: 60px;
   }
 }
+
+.featured_products {
+  font-size: 36px;
+  margin-left: 32px;
+  margin-bottom: 24px;
+}
+
+.p-card__menu--image__related {
+  width: 100%;
+}
+@media screen and (min-width: 600px) {
+  .p-card__menu--image__related {
+    height: 200px;
+  }
+}
+
+.p-card__menu--caption__related {
+  height: auto;
+  flex-grow: 1;
+  background-color: #F9F0E2;
+}
+
 .p-card__menu__related {
   display: flex;
   flex-direction: column;
+  width: 335px;
+}
+@media (max-width: 375px) {
+  .p-card__menu__related {
+    width: 300px;
+  }
+}
+@media (max-width: 599px) {
+  .p-card__menu__related:last-of-type {
+    margin-bottom: 10%;
+  }
+}
+@media screen and (min-width: 600px) {
+  .p-card__menu__related {
+    width: 250px;
+  }
+}
+@media (min-width: 1025px) {
+  .p-card__menu__related {
+    width: 240px;
+  }
+}
+@media (min-width: 1260px) {
+  .p-card__menu__related {
+    width: 300px;
+  }
 }
 
 .p-card__menu:last-of-type {

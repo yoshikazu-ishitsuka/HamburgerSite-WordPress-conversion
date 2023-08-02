@@ -41,6 +41,12 @@
     color: g.$color_white;
   }
 
+  &--card__related {
+    color: #3C2B1C;
+    padding: 0 18px;
+    padding-bottom: 20px;
+  }
+
   &--pagination {
     font-size: 16px;
     font-weight: normal;

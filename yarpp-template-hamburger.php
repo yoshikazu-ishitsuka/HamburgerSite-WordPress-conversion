@@ -5,5 +5,5 @@ Author: YOSHIKAZU ISHITSUKA
 Description: ハンバーガーサイト関連記事用のテンプレートです。
 */
 ?>
-<h3>★ おすすめ商品</h3>
+<h2 class="featured_products">★ おすすめ商品</h2>
 <?php get_template_part("components/card_related"); ?>

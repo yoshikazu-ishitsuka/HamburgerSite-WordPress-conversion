@@ -93,6 +93,36 @@
   }
   // archiveページの終わり //
 
+  // arhive--card__relatedページの始まり //
+
+  &__archive--card__related {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    
+    @media (max-width: 600px) {
+      align-items: center;
+    }
+
+    @include g.mq(sp) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      margin-bottom: 150px;
+
+      &::after {
+        @media (max-width: 829px) {
+          content: "";
+          display: block;
+          width: 250px;
+        }
+      }
+    }
+  }
+  // arhive--card__relatedページの終わり //
+
+
   // singleページの始まり //
   &__single {
     section {
