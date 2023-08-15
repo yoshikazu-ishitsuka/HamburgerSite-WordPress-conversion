@@ -92,7 +92,7 @@ function create_post_type()
         'news-cat',
         'news',
         array(
-            'label' => 'カテゴリー',
+            'label' => 'ニュースカテゴリー',
             'hierarchical' => true, // “true”だと「カテゴリー」のように。”false”だと「タグ」のような振る舞いになります
             'public' => true,
             'show_in_rest' => true,
@@ -103,7 +103,7 @@ function create_post_type()
         'news-tag',
         'news',
         array(
-            'label' => 'タグ',
+            'label' => 'ニュースタグ',
             'hierarchical' => false,
             'public' => true,
             'show_in_rest' => true,

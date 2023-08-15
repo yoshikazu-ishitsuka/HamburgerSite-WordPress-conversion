@@ -107,6 +107,13 @@
           // バーガー,サイド,ドリンクへの指定
           margin: 3rem 0 0 20%;
 
+          &:last-of-type {
+            margin: 2rem 0 6rem 20%;
+            @media (min-width: 768px) and (max-width: 1024px) {
+              margin: 2rem 0 6rem 61%;
+            }
+          }
+
           // ブレークポイント（タブレット）
           @include g.mq(tab) {
             margin: 3rem 0 0 61%;

@@ -50,7 +50,7 @@
             </h2>
         </section>
 
-        taxonomy.phpです
+        taxonomy-news-cat.phpです
                         
         <section class="p-visual__archive--sentence">
             <h2 class="c-title--archive">
@@ -59,7 +59,7 @@
                     $category_title = single_cat_title('', false);
 
                     // 付け加えるテキスト
-                    $additional_text = 'の一覧です';
+                    $additional_text = 'のお知らせ一覧です';
 
                     // タイトルとテキストを結合して表示
                     echo $category_title . $additional_text;

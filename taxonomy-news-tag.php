@@ -9,7 +9,7 @@
                 <span class="c-title--under-text">
                     <ul>
                     <?php
-                        if ($terms = get_the_terms($post->ID, 'news-cat')) {
+                        if ($terms = get_the_terms($post->ID, 'news-tag')) {
                             foreach ( $terms as $term ) {
                             // echo ('<li>');
                             // echo '<li><a href="'.get_term_link($term).'">'.$term->name.'</a></li>';
@@ -22,35 +22,43 @@
                         // echo 'お知らせカテゴリ名' . '&nbsp;（' . $custom_posts . '件）';
                     ?>
                     </ul>
-
-
-
-                    <?php single_cat_title('', true); ?>
-
+<?php 
+/*
                     <?php
-                    $term = get_queried_object();
-                    echo '（' . $term->count . '件）';
-                    ?>
-
-
-<?php /*
-                    <ul>
-                        <?php if ( $query->have_posts() ): while ( $query->have_posts() ): $query->the_post(); ?>
-                            <li>
-                                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                            </li>
-                        <?php endwhile; endif; wp_reset_postdata(); ?>
-                    </ul>
-      */
+                        $args = array(
+                            'post_type' => 'news',
+                            'posts_per_page' => -1,
+                            'order' => 'DESC',
+                            'tax_query' => array(
+                            array(
+                                'taxonomy' => 'ニュースカテゴリー',
+                                'terms' => array('news-cat'),
+                                'field' => 'slug'
+                            ),
+                            ),
+                        );
+                        $the_query = new WP_Query( $args );
+                    /?>
+                        <?php if ( $the_query->have_posts() ): while ( $the_query->have_posts() ): $the_query->the_post(); ?>
+                        <div>内容</div>
+                    <?php endwhile; endif; wp_reset_postdata(); ?>
+*/
 ?>
+
+                        <?php single_cat_title('', true); ?>
+
+                        <?php
+                        $term = get_queried_object();
+                        echo '（' . $term->count . '件）';
+                        ?>
+
                         <?php wp_reset_postdata(); ?>
 
-                    
                 </span>
             </h2>
         </section>
 
-        taxonomy.phpです
+        taxonomy-news-tag.phpです
                         
         <section class="p-visual__archive--sentence">
             <h2 class="c-title--archive">
@@ -59,7 +67,7 @@
                     $category_title = single_cat_title('', false);
 
                     // 付け加えるテキスト
-                    $additional_text = 'の一覧です';
+                    $additional_text = 'のお知らせ一覧です';
 
                     // タイトルとテキストを結合して表示
                     echo $category_title . $additional_text;
@@ -83,6 +91,7 @@
         </section>
 
         <?php get_template_part("components/card_news"); ?>
+
 
         <?php wp_pagenavi(); ?>
 

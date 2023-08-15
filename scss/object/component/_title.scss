@@ -88,8 +88,9 @@
     font-size: 16px;
 
     @media (max-width: 600px) {
-      margin-top: 17px;
-      margin-left: 10px;
+      width: max-content;
+      // margin-top: 17px;
+      // margin-left: 10px;
     }
   }
 
@@ -110,6 +111,12 @@
   &--card__related {
     color: #3C2B1C;
     padding: 28px 0 16px 18px;
+  }
+
+  &--card__news {
+    font-size: 36px;
+    font-family: "M PLUS 1p", sans-serif;
+    color: #3C2B1C;
   }
 
   &--subheading {

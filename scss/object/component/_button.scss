@@ -24,6 +24,14 @@
       margin-bottom: 30px;
       border-bottom: 1px solid #3C2B1C;
     }
+
+    &__news {
+      border-bottom: 1px solid #3C2B1C;
+      font-size: 16px;
+      font-weight: 700;
+      color: #3C2B1C;
+      cursor: pointer;
+    }
   }
 
   &--single {
