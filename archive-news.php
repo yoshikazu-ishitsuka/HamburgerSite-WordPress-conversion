@@ -14,33 +14,11 @@
                             echo '全ての記事' . '&nbsp;（' . $custom_posts . '件）';
                         ?>
                     </ul>
-<?php 
-/*
-                    <?php
-                        $args = array(
-                            'post_type' => 'news',
-                            'posts_per_page' => -1,
-                            'order' => 'DESC',
-                            'tax_query' => array(
-                            array(
-                                'taxonomy' => 'ニュースカテゴリー',
-                                'terms' => array('news-cat'),
-                                'field' => 'slug'
-                            ),
-                            ),
-                        );
-                        $the_query = new WP_Query( $args );
-                    /?>
-                        <?php if ( $the_query->have_posts() ): while ( $the_query->have_posts() ): $the_query->the_post(); ?>
-                        <div>内容</div>
-                    <?php endwhile; endif; wp_reset_postdata(); ?>
-*/
-?>
                 </span>
             </h2>
         </section>
 
-        archive-newsです
+        <!-- archive-newsです -->
                         
         <section class="p-visual__archive--sentence">
             <h2 class="c-title--archive">
@@ -64,7 +42,6 @@
         </section>
 
         <?php get_template_part("components/card_news"); ?>
-
 
         <?php wp_pagenavi(); ?>
 

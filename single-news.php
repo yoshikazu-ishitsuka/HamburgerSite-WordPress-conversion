@@ -16,7 +16,7 @@
       </h1>
     </section>
 
-    single-news.phpページです
+    <!-- single-news.phpページです -->
 
     <?php if (have_posts()) : ?>
       <?php while (have_posts()) : the_post(); ?>
