@@ -70,6 +70,10 @@
       .c-title--search_result {
         margin: 30px 101px 30px 22px;
 
+        @media (max-width: 450px) {
+          margin-right: 10px;
+        }
+
         // ブレークポイント（タブレット）
         @include g.mq(tab) {
           margin-top: 36px;

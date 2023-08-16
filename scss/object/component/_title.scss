@@ -117,6 +117,9 @@
     font-size: 36px;
     font-family: "M PLUS 1p", sans-serif;
     color: #3C2B1C;
+    @media (max-width: 450px) {
+      font-size: 20px;
+    }
   }
 
   &--subheading {
