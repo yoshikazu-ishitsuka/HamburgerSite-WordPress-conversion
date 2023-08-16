@@ -135,6 +135,10 @@
         margin-bottom: 60px;
       }
     }
+    .new-outer {
+      display: table;
+      margin-left: auto;
+    }
   }
 }
 
@@ -203,7 +207,14 @@
       width: 40vw;
     }
   }
+
+  .new-outer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
+
 
 .featured_products {
   font-size: 36px;

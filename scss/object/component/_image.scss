@@ -41,4 +41,10 @@
     background-image: url(/images/common/next.png);
     background-repeat: no-repeat;
   }
+
+  &--new-outer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }

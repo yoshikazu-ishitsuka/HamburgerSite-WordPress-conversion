@@ -4,7 +4,25 @@
             <figure class="p-card__menu">
                 <?php the_post_thumbnail('full', ['class' => 'p-card__menu--image']); ?>
                 <figcaption class="p-card__menu--caption c-background-color--card">
-                    <h2 class="c-title--card c-font-family--mplus1"><?php the_title(); ?></h2>
+                    <div class="new-outer">
+                        <?php 
+                            $days = 14; // テキストを表示する日数
+                            $published_time = get_post_time();
+                            $today = wp_date('U');
+                            $show_threshold = $today - $days * 86400;
+
+                            if ($published_time > $show_threshold) {
+                            // 画像のURLを設定
+                            $image_url = get_theme_file_uri('images/common/new.png');
+
+                            // 画像を出力
+                            echo '<img src="' . esc_url($image_url) . '" alt="New" class="new-image">';
+                            }
+                        ?>
+                    </div>
+                    <h2 class="c-title--card c-font-family--mplus1">
+                        <?php the_title(); ?>
+                    </h2>
                     <h3 class="c-title--subheading c-font-family--mplus1"></h3>
                     <p class="c-text--card c-font-family--mplus1">
                         <?php

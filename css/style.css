@@ -634,6 +634,11 @@ ul {
   background-image: url(/images/common/next.png);
   background-repeat: no-repeat;
 }
+.c-img--new-outer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
 .c-flex {
   display: flex;
@@ -1944,6 +1949,10 @@ ul {
     margin-bottom: 60px;
   }
 }
+.p-card__menu--caption .new-outer, .p-card__menu--caption__news .new-outer {
+  display: table;
+  margin-left: auto;
+}
 
 @media screen and (min-width: 768px) {
   .p-card__menu--image__news {
@@ -2001,6 +2010,11 @@ ul {
   .p-card__menu--caption__news .c-text--card__news {
     width: 40vw;
   }
+}
+.p-card__menu--caption__news .new-outer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .featured_products {

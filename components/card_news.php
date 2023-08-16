@@ -10,22 +10,34 @@
                 <img class="p-card__menu--image__news" src="<?php echo get_theme_file_uri(); ?>/images/noimage.png" alt="no image">
             <?php endif; ?>
                 <figcaption class="p-card__menu--caption__news c-background-color--card__news">
-                    <h2 class="c-title--card__news c-font-family--mplus1">
+                    <div class="c-img--new-outer">
+                        <h2 class="c-title--card__news c-font-family--mplus1">
+                            <?php 
+                                $title = get_the_title();
+                                if ($title) {
+                                echo esc_html($title);
+                                };
+                            ?>
+                        </h2>
                         <?php 
-                            $title = get_the_title();
-                            if ($title) {
-                            echo esc_html($title);
-                            };
+                            $days = 14; // 表示する日数
+                            $published_time = get_post_time();
+                            $today = wp_date('U');
+                            $show_threshold = $today - $days * 86400;
+
+                            if ($published_time > $show_threshold) {
+                            // 画像のURLを設定
+                            $image_url = get_theme_file_uri('images/common/new.png');
+                            // 画像を出力
+                            echo '<img src="' . esc_url($image_url) . '" alt="New" class="new-image">';
+                            }
                         ?>
-                    </h2>
+                    </div>
                     <ul class="p-card__menu__news__cat">
                         <?php
                             if ($terms = get_the_terms($post->ID, 'news-cat')) {
                                 foreach ( $terms as $term ) {
-                                    // echo ('<li>');
                                     echo '<li><a href="'.get_term_link($term) .'">' .$term->name . '</a></li>';
-                                    // echo esc_html($term->name);
-                                    // echo ('</li>');
                                 }
                             }
                         ?>
